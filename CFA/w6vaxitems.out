@@ -1,0 +1,528 @@
+Mplus VERSION 8.4
+MUTHEN & MUTHEN
+11/18/2020   9:14 PM
+
+INPUT INSTRUCTIONS
+
+  Title:
+    Stata2Mplus conversion for C:\Users\pkb16122\Dropbox\Grants and Applications\VaccineUKRI
+    List of variables converted shown below
+
+    id : New Panel ID
+    W8wave6 :
+    w6vax1 : Getting vaccines is a good way to protect children from disease.
+
+    w6vax2 : Generally I do what my doctor recommends about vaccines.
+
+    w6vax3 : New vaccines are recommended only if they are safe.
+
+    w6vax4 : Children do not need vaccines for diseases that are not common anymore.
+
+    w6vax5 : Enough children are vaccinated that even unvaccinated children are safe from di
+
+    w6vax6 : I am concerned about serious side effects of vaccines.
+
+    w6vax7 : Some vaccines cause autism in healthy children.
+
+    w6vax8 : Parents should have the right to refuse vaccines required for schools for any r
+
+    w6vax9 : The risks vaccinations pose to children outweigh their health benefits.
+
+
+    w6vax10 : Vaccinations are one of the most significant achievements in improving public
+
+
+  Data:
+  File is w6vaxitems.dat;
+  Variable:
+    Names are
+       id W8wave6 w6vax1 w6vax2 w6vax3 w6vax4 w6vax5 w6vax6 w6vax7 w6vax8
+       w6vax9 w6vax10;
+    Usevariables are w6vax1-w6vax10;
+    Categorical are w6vax1-w6vax10;
+    Missing are all (-9999) ;
+    idvariable is id;
+    weight is W8wave6;
+
+  Analysis:
+    Estimator is WLSMV;
+
+  Model:
+  VaccineL by w6vax1-w6vax10;
+  w6vax2 with w6vax3;
+
+  Output:
+  StdY;
+  Mod(10);
+
+
+
+*** WARNING
+  Input line exceeded 90 characters. Some input may be truncated.
+    Stata2Mplus conversion for C:\Users\pkb16122\Dropbox\Grants and Applications\VaccineUKRI_
+*** WARNING
+  Input line exceeded 90 characters. Some input may be truncated.
+    w6vax5 : Enough children are vaccinated that even unvaccinated children are safe from dis
+*** WARNING
+  Input line exceeded 90 characters. Some input may be truncated.
+    w6vax8 : Parents should have the right to refuse vaccines required for schools for any re
+*** WARNING
+  Input line exceeded 90 characters. Some input may be truncated.
+    w6vax10 : Vaccinations are one of the most significant achievements in improving public h
+*** WARNING
+  Data set contains cases with missing on all variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on all variables:  95
+   5 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+
+Stata2Mplus conversion for C:\Users\pkb16122\Dropbox\Grants and Applications\VaccineUKRI
+List of variables converted shown below
+
+id : New Panel ID
+W8wave6 :
+w6vax1 : Getting vaccines is a good way to protect children from disease.
+
+w6vax2 : Generally I do what my doctor recommends about vaccines.
+
+w6vax3 : New vaccines are recommended only if they are safe.
+
+w6vax4 : Children do not need vaccines for diseases that are not common anymore.
+
+w6vax5 : Enough children are vaccinated that even unvaccinated children are safe from di
+
+w6vax6 : I am concerned about serious side effects of vaccines.
+
+w6vax7 : Some vaccines cause autism in healthy children.
+
+w6vax8 : Parents should have the right to refuse vaccines required for schools for any r
+
+w6vax9 : The risks vaccinations pose to children outweigh their health benefits.
+
+
+w6vax10 : Vaccinations are one of the most significant achievements in improving public
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                        3932
+
+Number of dependent variables                                   10
+Number of independent variables                                  0
+Number of continuous latent variables                            1
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   W6VAX1      W6VAX2      W6VAX3      W6VAX4      W6VAX5      W6VAX6
+   W6VAX7      W6VAX8      W6VAX9      W6VAX10
+
+Continuous latent variables
+   VACCINEL
+
+Variables with special functions
+
+  Weight variable       W8WAVE6
+  ID variable           ID
+
+Estimator                                                    WLSMV
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Parameterization                                             DELTA
+Link                                                        PROBIT
+
+Input data file(s)
+  w6vaxitems.dat
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns           181
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              W6VAX1        W6VAX2        W6VAX3        W6VAX4        W6VAX5
+              ________      ________      ________      ________      ________
+ W6VAX1         0.989
+ W6VAX2         0.977         0.986
+ W6VAX3         0.935         0.930         0.939
+ W6VAX4         0.943         0.938         0.903         0.947
+ W6VAX5         0.914         0.909         0.878         0.892         0.916
+ W6VAX6         0.968         0.963         0.924         0.932         0.901
+ W6VAX7         0.736         0.734         0.719         0.724         0.710
+ W6VAX8         0.942         0.938         0.903         0.911         0.883
+ W6VAX9         0.941         0.934         0.905         0.915         0.887
+ W6VAX10        0.976         0.969         0.932         0.939         0.910
+
+
+           Covariance Coverage
+              W6VAX6        W6VAX7        W6VAX8        W6VAX9        W6VAX10
+              ________      ________      ________      ________      ________
+ W6VAX6         0.974
+ W6VAX7         0.734         0.739
+ W6VAX8         0.931         0.719         0.948
+ W6VAX9         0.930         0.727         0.909         0.944
+ W6VAX10        0.961         0.734         0.936         0.937         0.982
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+    W6VAX1
+      Category 1    0.007           28.667
+      Category 2    0.012           48.477
+      Category 3    0.073          283.120
+      Category 4    0.436         1692.880
+      Category 5    0.472         1832.409
+    W6VAX2
+      Category 1    0.012           47.640
+      Category 2    0.032          123.700
+      Category 3    0.146          567.029
+      Category 4    0.523         2024.851
+      Category 5    0.286         1108.394
+    W6VAX3
+      Category 1    0.010           36.822
+      Category 2    0.038          140.526
+      Category 3    0.183          679.214
+      Category 4    0.524         1946.270
+      Category 5    0.245          910.013
+    W6VAX4
+      Category 1    0.019           68.892
+      Category 2    0.070          259.526
+      Category 3    0.168          624.123
+      Category 4    0.433         1609.796
+      Category 5    0.311         1157.796
+    W6VAX5
+      Category 1    0.029          104.528
+      Category 2    0.090          324.884
+      Category 3    0.208          746.940
+      Category 4    0.406         1459.296
+      Category 5    0.268          962.841
+    W6VAX6
+      Category 1    0.058          221.795
+      Category 2    0.207          793.905
+      Category 3    0.343         1313.631
+      Category 4    0.269         1030.436
+      Category 5    0.122          468.703
+    W6VAX7
+      Category 1    0.036          105.104
+      Category 2    0.118          342.501
+      Category 3    0.321          933.152
+      Category 4    0.257          746.794
+      Category 5    0.269          782.326
+    W6VAX8
+      Category 1    0.082          305.467
+      Category 2    0.270         1007.601
+      Category 3    0.271         1007.715
+      Category 4    0.259          964.757
+      Category 5    0.118          439.832
+    W6VAX9
+      Category 1    0.096          353.721
+      Category 2    0.164          607.140
+      Category 3    0.162          601.182
+      Category 4    0.280         1038.145
+      Category 5    0.298         1101.623
+    W6VAX10
+      Category 1    0.008           30.419
+      Category 2    0.021           79.216
+      Category 3    0.113          437.516
+      Category 4    0.432         1668.200
+      Category 5    0.426         1644.576
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       51
+
+Chi-Square Test of Model Fit
+
+          Value                           2786.235*
+          Degrees of Freedom                    34
+          P-Value                           0.0000
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.143
+          90 Percent C.I.                    0.139  0.148
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                0.875
+          TLI                                0.835
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                          22130.991
+          Degrees of Freedom                    45
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.071
+
+Optimum Function Value for Weighted Least-Squares Estimator
+
+          Value                     0.26711082D+00
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ VACCINEL BY
+    W6VAX1             1.000      0.000    999.000    999.000
+    W6VAX2             0.754      0.015     49.013      0.000
+    W6VAX3             0.663      0.016     40.608      0.000
+    W6VAX4             0.843      0.015     54.843      0.000
+    W6VAX5             0.702      0.018     39.045      0.000
+    W6VAX6             0.774      0.016     47.060      0.000
+    W6VAX7             0.943      0.016     58.753      0.000
+    W6VAX8             0.659      0.017     39.689      0.000
+    W6VAX9             0.567      0.016     34.497      0.000
+    W6VAX10            0.918      0.016     56.946      0.000
+
+ W6VAX2   WITH
+    W6VAX3             0.177      0.012     14.563      0.000
+
+ Thresholds
+    W6VAX1$1          -2.438      0.074    -32.823      0.000
+    W6VAX1$2          -2.057      0.057    -36.382      0.000
+    W6VAX1$3          -1.324      0.032    -41.763      0.000
+    W6VAX1$4           0.071      0.022      3.235      0.001
+    W6VAX2$1          -2.247      0.059    -37.949      0.000
+    W6VAX2$2          -1.703      0.037    -45.854      0.000
+    W6VAX2$3          -0.875      0.025    -34.595      0.000
+    W6VAX2$4           0.564      0.024     23.955      0.000
+    W6VAX3$1          -2.329      0.061    -38.202      0.000
+    W6VAX3$2          -1.667      0.037    -45.080      0.000
+    W6VAX3$3          -0.737      0.025    -29.706      0.000
+    W6VAX3$4           0.690      0.025     27.472      0.000
+    W6VAX4$1          -2.085      0.060    -34.922      0.000
+    W6VAX4$2          -1.351      0.035    -39.109      0.000
+    W6VAX4$3          -0.656      0.025    -26.184      0.000
+    W6VAX4$4           0.492      0.023     21.057      0.000
+    W6VAX5$1          -1.895      0.050    -37.970      0.000
+    W6VAX5$2          -1.178      0.031    -37.427      0.000
+    W6VAX5$3          -0.448      0.024    -18.565      0.000
+    W6VAX5$4           0.620      0.024     25.497      0.000
+    W6VAX6$1          -1.572      0.036    -43.107      0.000
+    W6VAX6$2          -0.627      0.024    -26.317      0.000
+    W6VAX6$3           0.275      0.023     12.210      0.000
+    W6VAX6$4           1.163      0.029     40.281      0.000
+    W6VAX7$1          -1.798      0.047    -38.331      0.000
+    W6VAX7$2          -1.020      0.032    -31.974      0.000
+    W6VAX7$3          -0.064      0.026     -2.503      0.012
+    W6VAX7$4           0.616      0.027     22.486      0.000
+    W6VAX8$1          -1.392      0.033    -42.430      0.000
+    W6VAX8$2          -0.379      0.023    -16.321      0.000
+    W6VAX8$3           0.313      0.023     13.791      0.000
+    W6VAX8$4           1.185      0.029     41.353      0.000
+    W6VAX9$1          -1.307      0.031    -42.339      0.000
+    W6VAX9$2          -0.645      0.024    -26.613      0.000
+    W6VAX9$3          -0.197      0.023     -8.657      0.000
+    W6VAX9$4           0.531      0.024     22.454      0.000
+    W6VAX10$1         -2.414      0.071    -34.060      0.000
+    W6VAX10$2         -1.905      0.049    -39.114      0.000
+    W6VAX10$3         -1.072      0.029    -37.188      0.000
+    W6VAX10$4          0.186      0.022      8.413      0.000
+
+ Variances
+    VACCINEL           0.677      0.016     42.456      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDY Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ VACCINEL BY
+    W6VAX1             0.823      0.010     84.911      0.000
+    W6VAX2             0.620      0.012     52.629      0.000
+    W6VAX3             0.545      0.013     42.728      0.000
+    W6VAX4             0.694      0.011     63.207      0.000
+    W6VAX5             0.577      0.013     44.453      0.000
+    W6VAX6             0.637      0.011     57.270      0.000
+    W6VAX7             0.776      0.011     73.320      0.000
+    W6VAX8             0.542      0.013     42.702      0.000
+    W6VAX9             0.467      0.013     36.071      0.000
+    W6VAX10            0.755      0.010     74.253      0.000
+
+ W6VAX2   WITH
+    W6VAX3             0.269      0.017     15.590      0.000
+
+ Thresholds
+    W6VAX1$1          -2.438      0.074    -32.823      0.000
+    W6VAX1$2          -2.057      0.057    -36.382      0.000
+    W6VAX1$3          -1.324      0.032    -41.763      0.000
+    W6VAX1$4           0.071      0.022      3.235      0.001
+    W6VAX2$1          -2.247      0.059    -37.949      0.000
+    W6VAX2$2          -1.703      0.037    -45.854      0.000
+    W6VAX2$3          -0.875      0.025    -34.595      0.000
+    W6VAX2$4           0.564      0.024     23.955      0.000
+    W6VAX3$1          -2.329      0.061    -38.202      0.000
+    W6VAX3$2          -1.667      0.037    -45.080      0.000
+    W6VAX3$3          -0.737      0.025    -29.706      0.000
+    W6VAX3$4           0.690      0.025     27.472      0.000
+    W6VAX4$1          -2.085      0.060    -34.922      0.000
+    W6VAX4$2          -1.351      0.035    -39.109      0.000
+    W6VAX4$3          -0.656      0.025    -26.184      0.000
+    W6VAX4$4           0.492      0.023     21.057      0.000
+    W6VAX5$1          -1.895      0.050    -37.970      0.000
+    W6VAX5$2          -1.178      0.031    -37.427      0.000
+    W6VAX5$3          -0.448      0.024    -18.565      0.000
+    W6VAX5$4           0.620      0.024     25.497      0.000
+    W6VAX6$1          -1.572      0.036    -43.107      0.000
+    W6VAX6$2          -0.627      0.024    -26.317      0.000
+    W6VAX6$3           0.275      0.023     12.210      0.000
+    W6VAX6$4           1.163      0.029     40.281      0.000
+    W6VAX7$1          -1.798      0.047    -38.331      0.000
+    W6VAX7$2          -1.020      0.032    -31.974      0.000
+    W6VAX7$3          -0.064      0.026     -2.503      0.012
+    W6VAX7$4           0.616      0.027     22.486      0.000
+    W6VAX8$1          -1.392      0.033    -42.430      0.000
+    W6VAX8$2          -0.379      0.023    -16.321      0.000
+    W6VAX8$3           0.313      0.023     13.791      0.000
+    W6VAX8$4           1.185      0.029     41.353      0.000
+    W6VAX9$1          -1.307      0.031    -42.339      0.000
+    W6VAX9$2          -0.645      0.024    -26.613      0.000
+    W6VAX9$3          -0.197      0.023     -8.657      0.000
+    W6VAX9$4           0.531      0.024     22.454      0.000
+    W6VAX10$1         -2.414      0.071    -34.060      0.000
+    W6VAX10$2         -1.905      0.049    -39.114      0.000
+    W6VAX10$3         -1.072      0.029    -37.188      0.000
+    W6VAX10$4          0.186      0.022      8.413      0.000
+
+ Variances
+    VACCINEL           1.000      0.000    999.000    999.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed   Residual
+    Variable        Estimate       S.E.  Est./S.E.    P-Value    Variance
+
+    W6VAX1             0.677      0.016     42.456      0.000      0.323
+    W6VAX2             0.385      0.015     26.314      0.000      0.615
+    W6VAX3             0.297      0.014     21.364      0.000      0.703
+    W6VAX4             0.481      0.015     31.604      0.000      0.519
+    W6VAX5             0.333      0.015     22.226      0.000      0.667
+    W6VAX6             0.405      0.014     28.635      0.000      0.595
+    W6VAX7             0.602      0.016     36.660      0.000      0.398
+    W6VAX8             0.294      0.014     21.351      0.000      0.706
+    W6VAX9             0.218      0.012     18.036      0.000      0.782
+    W6VAX10            0.570      0.015     37.127      0.000      0.430
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.263E-02
+       (ratio of smallest to largest eigenvalue)
+
+
+MODEL MODIFICATION INDICES
+
+NOTE:  Modification indices for direct effects of observed dependent variables
+regressed on covariates and residual covariances among observed dependent
+variables may not be included.  To include these, request MODINDICES (ALL).
+
+Minimum M.I. value for printing the modification index    10.000
+
+                                   M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+
+WITH Statements
+
+W6VAX2   WITH W6VAX1             247.996     0.207      0.207        0.465
+W6VAX3   WITH W6VAX1             163.230     0.177      0.177        0.372
+W6VAX4   WITH W6VAX1              51.753    -0.109     -0.109       -0.266
+W6VAX4   WITH W6VAX2              40.802    -0.098     -0.098       -0.174
+W6VAX4   WITH W6VAX3              38.892    -0.096     -0.096       -0.160
+W6VAX5   WITH W6VAX1              67.786    -0.127     -0.127       -0.274
+W6VAX5   WITH W6VAX2              48.127    -0.110     -0.110       -0.172
+W6VAX5   WITH W6VAX3              62.483    -0.127     -0.127       -0.186
+W6VAX5   WITH W6VAX4             331.129     0.238      0.238        0.406
+W6VAX6   WITH W6VAX1             186.137    -0.233     -0.233       -0.531
+W6VAX6   WITH W6VAX2              41.955    -0.100     -0.100       -0.165
+W6VAX6   WITH W6VAX3              24.555    -0.074     -0.074       -0.115
+W6VAX7   WITH W6VAX1             206.665    -0.260     -0.260       -0.726
+W6VAX7   WITH W6VAX2              66.218    -0.140     -0.140       -0.283
+W6VAX7   WITH W6VAX3              20.988    -0.076     -0.076       -0.143
+W6VAX7   WITH W6VAX5              11.135     0.052      0.052        0.101
+W6VAX7   WITH W6VAX6             309.631     0.238      0.238        0.489
+W6VAX8   WITH W6VAX1             116.912    -0.191     -0.191       -0.399
+W6VAX8   WITH W6VAX2              29.819    -0.085     -0.085       -0.129
+W6VAX8   WITH W6VAX3              31.865    -0.089     -0.089       -0.126
+W6VAX8   WITH W6VAX4              10.205     0.049      0.049        0.082
+W6VAX8   WITH W6VAX6             100.241     0.136      0.136        0.210
+W6VAX8   WITH W6VAX7             104.572     0.153      0.153        0.288
+W6VAX9   WITH W6VAX1              85.082    -0.146     -0.146       -0.290
+W6VAX9   WITH W6VAX2              58.312    -0.118     -0.118       -0.170
+W6VAX9   WITH W6VAX3              43.163    -0.105     -0.105       -0.141
+W6VAX9   WITH W6VAX4              23.509     0.070      0.070        0.109
+W6VAX9   WITH W6VAX5              30.286     0.081      0.081        0.112
+W6VAX9   WITH W6VAX6              94.093     0.129      0.129        0.189
+W6VAX9   WITH W6VAX7              53.708     0.108      0.108        0.193
+W6VAX10  WITH W6VAX1             358.302     0.241      0.241        0.647
+W6VAX10  WITH W6VAX2             113.881     0.141      0.141        0.274
+W6VAX10  WITH W6VAX3             128.085     0.157      0.157        0.285
+W6VAX10  WITH W6VAX4              32.434    -0.084     -0.084       -0.178
+W6VAX10  WITH W6VAX5              62.101    -0.122     -0.122       -0.227
+W6VAX10  WITH W6VAX6             152.011    -0.203     -0.203       -0.401
+W6VAX10  WITH W6VAX7             182.213    -0.238     -0.238       -0.576
+W6VAX10  WITH W6VAX8              91.376    -0.165     -0.165       -0.300
+W6VAX10  WITH W6VAX9              61.112    -0.121     -0.121       -0.208
+
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    c:\users\ts139c\dropbox\grants and applications\vaccineukri_rapid\taiwan\w6vaxitems.dgm
+
+     Beginning Time:  21:14:37
+        Ending Time:  21:14:37
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2019 Muthen & Muthen

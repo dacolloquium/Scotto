@@ -1,0 +1,1156 @@
+Mplus VERSION 8.4
+MUTHEN & MUTHEN
+11/18/2020   9:46 PM
+
+INPUT INSTRUCTIONS
+
+  Title:
+    Stata2Mplus conversion for C:\Users\pkb16122\Dropbox\Grants and Applications\VaccineUKRI
+    List of variables converted shown below
+
+    id :
+    weight : Case weight - Panel
+    vac1 : Getting vaccines is a good way to protect children from disease.
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    vac2 : Generally, I do what my doctor recommends about vaccines.
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    vac3 : New vaccines are recommended only if they are safe.
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    vac4 : Children do not need vaccines for diseases that are not common anymore.
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    vac5 : Enough children are vaccinated so that even unvaccinated children are safe from
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    vac6 : I am concerned about serious side effects of vaccines.
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    vac7 : Some vaccines cause autism in healthy children
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    vac8 : Parents should have the right to refuse vaccines required for (not by) schools f
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    vac9 : The risks that vaccinations pose to children outweigh their health benefits.
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    vac10 : Vaccinations are one of the most significant achievements in improving public he
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    group :
+    _merge :
+      1: master only (1)
+      2: using only (2)
+
+  Data:
+    File is stacked.dat ;
+  Variable:
+    Names are
+       id weight vac1 vac2 vac3 vac4 vac5 vac6 vac7 vac8 vac9 vac10 group
+       merge;
+    Usevariables are vac1-vac10;
+    Categorical are vac1-vac10;
+    Missing are all (-9999) ;
+    weight=weight;
+    idvariable is id;
+   ! useobservations are group EQ 1;
+   group is group (0=UK 1=US);
+  Analysis:
+    Estimator is WLSMV ;
+    Parameterization is theta;
+    difftest is configural.dta;
+
+  Model:
+
+  VaccineL by vac1@1;
+  VaccineL by vac2 (1);
+  VaccineL by vac3 (2);
+  VaccineL by vac4 (3);
+  VaccineL by vac5 (4);
+  VaccineL by vac6 (5);
+  VaccineL by vac7 (6);
+  VaccineL by vac8 (7);
+  VaccineL by vac9 (8);
+  VaccineL by vac10 (9);
+  methods by vac4@1 ;
+  methods by vac5 (10);
+  methods by vac6 (11);
+  methods by vac7 (12);
+  methods by vac8 (13);
+  methods by vac9 (14);
+  vac4 with vac5;
+  methods with VaccineL@0;
+
+  vac1@1;
+  vac2@1;
+  vac3@1;
+  vac4@1;
+  vac5@1;
+  vac6@1;
+  vac7@1;
+  vac8@1;
+  vac9@1;
+  vac10@1;
+
+
+
+  Model US:
+  VaccineL by vac1@1;
+  VaccineL by vac2 (1);
+  VaccineL by vac3 (2);
+  VaccineL by vac4 (3);
+  VaccineL by vac5 (4);
+  VaccineL by vac6 (5);
+  VaccineL by vac7 (6);
+  VaccineL by vac8 (7);
+  VaccineL by vac9 (8);
+  VaccineL by vac10 (9);
+  methods by vac4@1 ;
+  methods by vac5 (10);
+  methods by vac6 (11);
+  methods by vac7 (12);
+  methods by vac8 (13);
+  methods by vac9 (14);
+  vac4 with vac5;
+  methods with VaccineL@0;
+
+
+  ! [VaccineL@0];
+  ! [methods@0];
+  ![VAC1$2*];
+  ![VAC1$3*];
+  ![VAC1$4*];
+  ![VAC2$1*];
+  ![VAC2$2*];
+  ![VAC2$3*];
+  ![VAC2$4*];
+  ![VAC3$1*];
+  ![VAC3$2*];
+  ![VAC3$3*];
+  ![VAC3$4*];
+
+  ![VAC4$2*];
+  ![VAC4$3*];
+  ![VAC4$4*];
+  ![VAC5$1*];
+  ![VAC5$2*];
+  ![VAC5$3*];
+  ![VAC5$4*];
+  ![VAC6$1*];
+  ![VAC6$2*];
+  ![VAC6$3*];
+  ![VAC6$4*];
+  ![VAC7$1*];
+  ![VAC7$2*];
+  ![VAC7$3*];
+  ![VAC7$4*];
+  ![VAC8$1*];
+  ![VAC8$2*];
+  ![VAC8$3*];
+  ![VAC8$4*];
+  ![VAC9$1*];
+  ![VAC9$2*];
+  ![VAC9$3*];
+  ![VAC9$4*];
+  ![VAC10$1*];
+  ![VAC10$2*];
+  ![VAC10$3*];
+  ![VAC10$4*];
+  ![VAC10$2*];
+  ![VAC10$3*];
+  ![VAC10$4*];
+
+
+  vac1@1;
+  vac2@1;
+  vac3@1;
+  vac4@1;
+  vac5@1;
+  vac6@1;
+  vac7@1;
+  vac8@1;
+  vac9@1;
+  vac10@1;
+
+
+  Output:
+  stdyx;
+  mod(10);
+
+
+  Savedata:
+
+  !  difftest is configural.dta;
+
+
+
+*** WARNING
+  Input line exceeded 90 characters. Some input may be truncated.
+    Stata2Mplus conversion for C:\Users\pkb16122\Dropbox\Grants and Applications\VaccineUKRI_
+*** WARNING
+  Data set contains cases with missing on all variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on all variables:  1567
+   2 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+
+Stata2Mplus conversion for C:\Users\pkb16122\Dropbox\Grants and Applications\VaccineUKRI
+List of variables converted shown below
+
+id :
+weight : Case weight - Panel
+vac1 : Getting vaccines is a good way to protect children from disease.
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+vac2 : Generally, I do what my doctor recommends about vaccines.
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+vac3 : New vaccines are recommended only if they are safe.
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+vac4 : Children do not need vaccines for diseases that are not common anymore.
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+vac5 : Enough children are vaccinated so that even unvaccinated children are safe from
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+vac6 : I am concerned about serious side effects of vaccines.
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+vac7 : Some vaccines cause autism in healthy children
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+vac8 : Parents should have the right to refuse vaccines required for (not by) schools f
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+vac9 : The risks that vaccinations pose to children outweigh their health benefits.
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+vac10 : Vaccinations are one of the most significant achievements in improving public he
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+group :
+_merge :
+1: master only (1)
+2: using only (2)
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 2
+Number of observations
+   Group UK                                                   3932
+   Group US                                                   2932
+   Total sample size                                          6864
+
+Number of dependent variables                                   10
+Number of independent variables                                  0
+Number of continuous latent variables                            2
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   VAC1        VAC2        VAC3        VAC4        VAC5        VAC6
+   VAC7        VAC8        VAC9        VAC10
+
+Continuous latent variables
+   VACCINEL    METHODS
+
+Variables with special functions
+
+  Grouping variable     GROUP
+  Weight variable       WEIGHT
+  ID variable           ID
+
+Estimator                                                    WLSMV
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Parameterization                                             THETA
+Link                                                        PROBIT
+
+Input data file(s)
+  stacked.dat
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+   Group UK
+     Number of missing data patterns           181
+
+   Group US
+     Number of missing data patterns           127
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT FOR UK
+
+
+           Covariance Coverage
+              VAC1          VAC2          VAC3          VAC4          VAC5
+              ________      ________      ________      ________      ________
+ VAC1           0.989
+ VAC2           0.977         0.986
+ VAC3           0.935         0.930         0.939
+ VAC4           0.943         0.938         0.903         0.947
+ VAC5           0.914         0.909         0.878         0.892         0.916
+ VAC6           0.968         0.963         0.924         0.932         0.901
+ VAC7           0.736         0.734         0.719         0.724         0.710
+ VAC8           0.942         0.938         0.903         0.911         0.883
+ VAC9           0.941         0.934         0.905         0.915         0.887
+ VAC10          0.976         0.969         0.932         0.939         0.910
+
+
+           Covariance Coverage
+              VAC6          VAC7          VAC8          VAC9          VAC10
+              ________      ________      ________      ________      ________
+ VAC6           0.974
+ VAC7           0.734         0.739
+ VAC8           0.931         0.719         0.948
+ VAC9           0.930         0.727         0.909         0.944
+ VAC10          0.961         0.734         0.936         0.937         0.982
+
+
+     PROPORTION OF DATA PRESENT FOR US
+
+
+           Covariance Coverage
+              VAC1          VAC2          VAC3          VAC4          VAC5
+              ________      ________      ________      ________      ________
+ VAC1           0.990
+ VAC2           0.982         0.990
+ VAC3           0.931         0.928         0.935
+ VAC4           0.957         0.955         0.911         0.962
+ VAC5           0.954         0.950         0.909         0.934         0.956
+ VAC6           0.977         0.978         0.927         0.952         0.945
+ VAC7           0.827         0.826         0.807         0.817         0.815
+ VAC8           0.961         0.959         0.913         0.939         0.934
+ VAC9           0.952         0.948         0.908         0.934         0.927
+ VAC10          0.979         0.976         0.926         0.952         0.949
+
+
+           Covariance Coverage
+              VAC6          VAC7          VAC8          VAC9          VAC10
+              ________      ________      ________      ________      ________
+ VAC6           0.986
+ VAC7           0.825         0.830
+ VAC8           0.956         0.818         0.966
+ VAC9           0.946         0.818         0.934         0.954
+ VAC10          0.972         0.825         0.957         0.948         0.983
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+  Group UK
+    VAC1
+      Category 1    0.007           28.667
+      Category 2    0.012           48.477
+      Category 3    0.073          283.120
+      Category 4    0.436         1692.880
+      Category 5    0.472         1832.409
+    VAC2
+      Category 1    0.012           47.640
+      Category 2    0.032          123.700
+      Category 3    0.146          567.029
+      Category 4    0.523         2024.851
+      Category 5    0.286         1108.394
+    VAC3
+      Category 1    0.010           36.822
+      Category 2    0.038          140.526
+      Category 3    0.183          679.214
+      Category 4    0.524         1946.270
+      Category 5    0.245          910.013
+    VAC4
+      Category 1    0.019           68.892
+      Category 2    0.070          259.526
+      Category 3    0.168          624.123
+      Category 4    0.433         1609.796
+      Category 5    0.311         1157.796
+    VAC5
+      Category 1    0.029          104.528
+      Category 2    0.090          324.884
+      Category 3    0.208          746.940
+      Category 4    0.406         1459.296
+      Category 5    0.268          962.841
+    VAC6
+      Category 1    0.058          221.795
+      Category 2    0.207          793.905
+      Category 3    0.343         1313.631
+      Category 4    0.269         1030.436
+      Category 5    0.122          468.703
+    VAC7
+      Category 1    0.036          105.104
+      Category 2    0.118          342.501
+      Category 3    0.321          933.152
+      Category 4    0.257          746.794
+      Category 5    0.269          782.326
+    VAC8
+      Category 1    0.082          305.467
+      Category 2    0.270         1007.601
+      Category 3    0.271         1007.715
+      Category 4    0.259          964.757
+      Category 5    0.118          439.832
+    VAC9
+      Category 1    0.096          353.721
+      Category 2    0.164          607.140
+      Category 3    0.162          601.182
+      Category 4    0.280         1038.145
+      Category 5    0.298         1101.623
+    VAC10
+      Category 1    0.008           30.419
+      Category 2    0.021           79.216
+      Category 3    0.113          437.516
+      Category 4    0.432         1668.200
+      Category 5    0.426         1644.576
+
+  Group US
+    VAC1
+      Category 1    0.027           76.847
+      Category 2    0.020           58.936
+      Category 3    0.156          452.342
+      Category 4    0.315          910.599
+      Category 5    0.482         1395.121
+    VAC2
+      Category 1    0.039          113.652
+      Category 2    0.051          147.375
+      Category 3    0.227          657.695
+      Category 4    0.396         1146.824
+      Category 5    0.287          830.670
+    VAC3
+      Category 1    0.049          131.846
+      Category 2    0.085          230.459
+      Category 3    0.263          712.758
+      Category 4    0.381         1032.893
+      Category 5    0.223          604.200
+    VAC4
+      Category 1    0.042          118.301
+      Category 2    0.082          230.310
+      Category 3    0.208          581.712
+      Category 4    0.274          766.338
+      Category 5    0.393         1098.653
+    VAC5
+      Category 1    0.051          139.348
+      Category 2    0.099          271.828
+      Category 3    0.226          620.454
+      Category 4    0.273          752.149
+      Category 5    0.352          966.881
+    VAC6
+      Category 1    0.109          314.065
+      Category 2    0.211          607.638
+      Category 3    0.264          761.080
+      Category 4    0.234          674.112
+      Category 5    0.181          522.080
+    VAC7
+      Category 1    0.061          147.932
+      Category 2    0.126          304.209
+      Category 3    0.295          713.826
+      Category 4    0.181          437.517
+      Category 5    0.338          817.957
+    VAC8
+      Category 1    0.131          368.910
+      Category 2    0.164          459.833
+      Category 3    0.213          600.275
+      Category 4    0.231          649.571
+      Category 5    0.261          733.061
+    VAC9
+      Category 1    0.113          311.147
+      Category 2    0.128          354.844
+      Category 3    0.233          645.363
+      Category 4    0.206          568.157
+      Category 5    0.320          885.143
+    VAC10
+      Category 1    0.022           62.105
+      Category 2    0.041          117.350
+      Category 3    0.196          559.770
+      Category 4    0.326          930.152
+      Category 5    0.415         1182.642
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       62
+
+Chi-Square Test of Model Fit
+
+          Value                            973.053*
+          Degrees of Freedom                   108
+          P-Value                           0.0000
+
+Chi-Square Contribution From Each Group
+
+          UK                               347.218
+          US                               625.834
+
+Chi-Square Test for Difference Testing
+
+          Value                            536.185*
+          Degrees of Freedom                    50
+          P-Value                           0.0000
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.  The DIFFTEST
+    option assumes the models are nested.  The NESTED option can be used to verify
+    that the models are nested.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.048
+          90 Percent C.I.                    0.046  0.051
+          Probability RMSEA <= .05           0.837
+
+CFI/TLI
+
+          CFI                                0.979
+          TLI                                0.982
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                          41069.900
+          Degrees of Freedom                    90
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.037
+
+Optimum Function Value for Weighted Least-Squares Estimator
+
+          Value                     0.62910546D-01
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Group UK
+
+ VACCINEL BY
+    VAC1               1.000      0.000    999.000    999.000
+    VAC2               0.492      0.024     20.661      0.000
+    VAC3               0.390      0.019     20.119      0.000
+    VAC4               0.403      0.019     21.448      0.000
+    VAC5               0.245      0.014     17.464      0.000
+    VAC6               0.308      0.017     17.938      0.000
+    VAC7               0.527      0.030     17.770      0.000
+    VAC8               0.294      0.016     18.138      0.000
+    VAC9               0.181      0.010     17.633      0.000
+    VAC10              0.711      0.040     17.668      0.000
+
+ METHODS  BY
+    VAC4               1.000      0.000    999.000    999.000
+    VAC5               0.829      0.038     21.570      0.000
+    VAC6               1.291      0.062     20.901      0.000
+    VAC7               2.066      0.123     16.837      0.000
+    VAC8               1.095      0.053     20.683      0.000
+    VAC9               0.853      0.042     20.382      0.000
+
+ METHODS  WITH
+    VACCINEL           0.000      0.000    999.000    999.000
+
+ VAC4     WITH
+    VAC5               0.304      0.018     17.179      0.000
+
+ Means
+    VACCINEL           0.000      0.000    999.000    999.000
+    METHODS            0.000      0.000    999.000    999.000
+
+ Thresholds
+    VAC1$1            -5.541      0.187    -29.688      0.000
+    VAC1$2            -4.738      0.166    -28.478      0.000
+    VAC1$3            -2.883      0.117    -24.565      0.000
+    VAC1$4             0.092      0.046      1.994      0.046
+    VAC2$1            -3.133      0.068    -45.921      0.000
+    VAC2$2            -2.384      0.049    -49.116      0.000
+    VAC2$3            -1.167      0.034    -33.953      0.000
+    VAC2$4             0.780      0.030     26.165      0.000
+    VAC3$1            -2.794      0.061    -45.432      0.000
+    VAC3$2            -1.996      0.041    -48.318      0.000
+    VAC3$3            -0.834      0.029    -28.902      0.000
+    VAC3$4             0.890      0.029     31.061      0.000
+    VAC4$1            -2.924      0.067    -43.438      0.000
+    VAC4$2            -1.906      0.045    -42.310      0.000
+    VAC4$3            -0.877      0.034    -25.970      0.000
+    VAC4$4             0.649      0.029     22.066      0.000
+    VAC5$1            -2.273      0.050    -45.110      0.000
+    VAC5$2            -1.417      0.034    -41.228      0.000
+    VAC5$3            -0.508      0.027    -19.048      0.000
+    VAC5$4             0.709      0.026     27.544      0.000
+    VAC6$1            -2.137      0.047    -45.899      0.000
+    VAC6$2            -0.833      0.031    -26.586      0.000
+    VAC6$3             0.405      0.029     13.908      0.000
+    VAC6$4             1.632      0.037     44.450      0.000
+    VAC7$1            -3.446      0.107    -32.334      0.000
+    VAC7$2            -1.941      0.071    -27.191      0.000
+    VAC7$3            -0.083      0.045     -1.842      0.066
+    VAC7$4             1.174      0.049     23.834      0.000
+    VAC8$1            -1.804      0.039    -46.280      0.000
+    VAC8$2            -0.549      0.028    -19.374      0.000
+    VAC8$3             0.353      0.027     12.936      0.000
+    VAC8$4             1.436      0.034     42.608      0.000
+    VAC9$1            -1.530      0.030    -51.612      0.000
+    VAC9$2            -0.774      0.025    -30.517      0.000
+    VAC9$3            -0.177      0.024     -7.354      0.000
+    VAC9$4             0.644      0.024     26.413      0.000
+    VAC10$1           -4.332      0.104    -41.606      0.000
+    VAC10$2           -3.358      0.085    -39.712      0.000
+    VAC10$3           -1.803      0.058    -31.349      0.000
+    VAC10$4            0.300      0.036      8.440      0.000
+
+ Variances
+    VACCINEL           3.771      0.331     11.407      0.000
+    METHODS            0.360      0.035     10.229      0.000
+
+ Residual Variances
+    VAC1               1.000      0.000    999.000    999.000
+    VAC2               1.000      0.000    999.000    999.000
+    VAC3               1.000      0.000    999.000    999.000
+    VAC4               1.000      0.000    999.000    999.000
+    VAC5               1.000      0.000    999.000    999.000
+    VAC6               1.000      0.000    999.000    999.000
+    VAC7               1.000      0.000    999.000    999.000
+    VAC8               1.000      0.000    999.000    999.000
+    VAC9               1.000      0.000    999.000    999.000
+    VAC10              1.000      0.000    999.000    999.000
+
+Group US
+
+ VACCINEL BY
+    VAC1               1.000      0.000    999.000    999.000
+    VAC2               0.492      0.024     20.661      0.000
+    VAC3               0.390      0.019     20.119      0.000
+    VAC4               0.403      0.019     21.448      0.000
+    VAC5               0.245      0.014     17.464      0.000
+    VAC6               0.308      0.017     17.938      0.000
+    VAC7               0.527      0.030     17.770      0.000
+    VAC8               0.294      0.016     18.138      0.000
+    VAC9               0.181      0.010     17.633      0.000
+    VAC10              0.711      0.040     17.668      0.000
+
+ METHODS  BY
+    VAC4               1.000      0.000    999.000    999.000
+    VAC5               0.829      0.038     21.570      0.000
+    VAC6               1.291      0.062     20.901      0.000
+    VAC7               2.066      0.123     16.837      0.000
+    VAC8               1.095      0.053     20.683      0.000
+    VAC9               0.853      0.042     20.382      0.000
+
+ METHODS  WITH
+    VACCINEL           0.000      0.000    999.000    999.000
+
+ VAC4     WITH
+    VAC5               0.294      0.028     10.605      0.000
+
+ Means
+    VACCINEL          -0.368      0.104     -3.529      0.000
+    METHODS            0.182      0.032      5.614      0.000
+
+ Thresholds
+    VAC1$1            -5.541      0.187    -29.688      0.000
+    VAC1$2            -4.738      0.166    -28.478      0.000
+    VAC1$3            -2.883      0.117    -24.565      0.000
+    VAC1$4             0.092      0.046      1.994      0.046
+    VAC2$1            -3.133      0.068    -45.921      0.000
+    VAC2$2            -2.384      0.049    -49.116      0.000
+    VAC2$3            -1.167      0.034    -33.953      0.000
+    VAC2$4             0.780      0.030     26.165      0.000
+    VAC3$1            -2.794      0.061    -45.432      0.000
+    VAC3$2            -1.996      0.041    -48.318      0.000
+    VAC3$3            -0.834      0.029    -28.902      0.000
+    VAC3$4             0.890      0.029     31.061      0.000
+    VAC4$1            -2.924      0.067    -43.438      0.000
+    VAC4$2            -1.906      0.045    -42.310      0.000
+    VAC4$3            -0.877      0.034    -25.970      0.000
+    VAC4$4             0.649      0.029     22.066      0.000
+    VAC5$1            -2.273      0.050    -45.110      0.000
+    VAC5$2            -1.417      0.034    -41.228      0.000
+    VAC5$3            -0.508      0.027    -19.048      0.000
+    VAC5$4             0.709      0.026     27.544      0.000
+    VAC6$1            -2.137      0.047    -45.899      0.000
+    VAC6$2            -0.833      0.031    -26.586      0.000
+    VAC6$3             0.405      0.029     13.908      0.000
+    VAC6$4             1.632      0.037     44.450      0.000
+    VAC7$1            -3.446      0.107    -32.334      0.000
+    VAC7$2            -1.941      0.071    -27.191      0.000
+    VAC7$3            -0.083      0.045     -1.842      0.066
+    VAC7$4             1.174      0.049     23.834      0.000
+    VAC8$1            -1.804      0.039    -46.280      0.000
+    VAC8$2            -0.549      0.028    -19.374      0.000
+    VAC8$3             0.353      0.027     12.936      0.000
+    VAC8$4             1.436      0.034     42.608      0.000
+    VAC9$1            -1.530      0.030    -51.612      0.000
+    VAC9$2            -0.774      0.025    -30.517      0.000
+    VAC9$3            -0.177      0.024     -7.354      0.000
+    VAC9$4             0.644      0.024     26.413      0.000
+    VAC10$1           -4.332      0.104    -41.606      0.000
+    VAC10$2           -3.358      0.085    -39.712      0.000
+    VAC10$3           -1.803      0.058    -31.349      0.000
+    VAC10$4            0.300      0.036      8.440      0.000
+
+ Variances
+    VACCINEL           7.909      0.784     10.084      0.000
+    METHODS            0.634      0.063     10.109      0.000
+
+ Residual Variances
+    VAC1               1.000      0.000    999.000    999.000
+    VAC2               1.000      0.000    999.000    999.000
+    VAC3               1.000      0.000    999.000    999.000
+    VAC4               1.000      0.000    999.000    999.000
+    VAC5               1.000      0.000    999.000    999.000
+    VAC6               1.000      0.000    999.000    999.000
+    VAC7               1.000      0.000    999.000    999.000
+    VAC8               1.000      0.000    999.000    999.000
+    VAC9               1.000      0.000    999.000    999.000
+    VAC10              1.000      0.000    999.000    999.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Group UK
+
+ VACCINEL BY
+    VAC1               0.889      0.008    108.845      0.000
+    VAC2               0.691      0.010     69.210      0.000
+    VAC3               0.604      0.011     55.158      0.000
+    VAC4               0.557      0.012     47.828      0.000
+    VAC5               0.391      0.013     30.379      0.000
+    VAC6               0.427      0.013     32.374      0.000
+    VAC7               0.541      0.014     37.572      0.000
+    VAC8               0.431      0.013     32.262      0.000
+    VAC9               0.298      0.013     23.504      0.000
+    VAC10              0.810      0.009     92.039      0.000
+
+ METHODS  BY
+    VAC4               0.427      0.017     25.869      0.000
+    VAC5               0.410      0.017     24.822      0.000
+    VAC6               0.553      0.014     40.789      0.000
+    VAC7               0.655      0.015     44.298      0.000
+    VAC8               0.495      0.015     33.669      0.000
+    VAC9               0.435      0.014     30.452      0.000
+
+ METHODS  WITH
+    VACCINEL           0.000      0.000    999.000    999.000
+
+ VAC4     WITH
+    VAC5               0.304      0.018     17.179      0.000
+
+ Means
+    VACCINEL           0.000      0.000    999.000    999.000
+    METHODS            0.000      0.000    999.000    999.000
+
+ Thresholds
+    VAC1$1            -2.537      0.064    -39.401      0.000
+    VAC1$2            -2.169      0.049    -44.259      0.000
+    VAC1$3            -1.320      0.030    -43.940      0.000
+    VAC1$4             0.042      0.021      1.964      0.050
+    VAC2$1            -2.265      0.050    -45.322      0.000
+    VAC2$2            -1.724      0.034    -51.359      0.000
+    VAC2$3            -0.843      0.023    -36.474      0.000
+    VAC2$4             0.564      0.022     25.219      0.000
+    VAC3$1            -2.227      0.048    -46.743      0.000
+    VAC3$2            -1.591      0.031    -50.606      0.000
+    VAC3$3            -0.665      0.022    -29.740      0.000
+    VAC3$4             0.709      0.024     30.145      0.000
+    VAC4$1            -2.082      0.050    -41.238      0.000
+    VAC4$2            -1.357      0.031    -43.895      0.000
+    VAC4$3            -0.625      0.023    -27.245      0.000
+    VAC4$4             0.462      0.021     21.828      0.000
+    VAC5$1            -1.873      0.043    -43.492      0.000
+    VAC5$2            -1.168      0.028    -41.401      0.000
+    VAC5$3            -0.419      0.022    -19.288      0.000
+    VAC5$4             0.585      0.021     27.427      0.000
+    VAC6$1            -1.527      0.033    -45.981      0.000
+    VAC6$2            -0.595      0.022    -26.760      0.000
+    VAC6$3             0.289      0.021     13.904      0.000
+    VAC6$4             1.167      0.026     44.397      0.000
+    VAC7$1            -1.820      0.042    -42.851      0.000
+    VAC7$2            -1.026      0.030    -33.957      0.000
+    VAC7$3            -0.044      0.024     -1.851      0.064
+    VAC7$4             0.620      0.025     24.516      0.000
+    VAC8$1            -1.361      0.030    -45.975      0.000
+    VAC8$2            -0.414      0.021    -19.449      0.000
+    VAC8$3             0.266      0.021     12.921      0.000
+    VAC8$4             1.083      0.025     43.291      0.000
+    VAC9$1            -1.300      0.028    -47.191      0.000
+    VAC9$2            -0.658      0.022    -29.816      0.000
+    VAC9$3            -0.151      0.021     -7.347      0.000
+    VAC9$4             0.547      0.021     26.214      0.000
+    VAC10$1           -2.542      0.058    -43.634      0.000
+    VAC10$2           -1.971      0.042    -46.430      0.000
+    VAC10$3           -1.058      0.027    -39.424      0.000
+    VAC10$4            0.176      0.021      8.255      0.000
+
+ Variances
+    VACCINEL           1.000      0.000    999.000    999.000
+    METHODS            1.000      0.000    999.000    999.000
+
+ Residual Variances
+    VAC1               0.210      0.015     14.433      0.000
+    VAC2               0.523      0.014     37.875      0.000
+    VAC3               0.635      0.013     48.034      0.000
+    VAC4               0.507      0.015     34.082      0.000
+    VAC5               0.679      0.015     45.815      0.000
+    VAC6               0.511      0.014     37.654      0.000
+    VAC7               0.279      0.015     18.019      0.000
+    VAC8               0.569      0.014     40.863      0.000
+    VAC9               0.722      0.012     58.050      0.000
+    VAC10              0.344      0.014     24.164      0.000
+
+Group US
+
+ VACCINEL BY
+    VAC1               0.942      0.005    179.673      0.000
+    VAC2               0.811      0.009     87.463      0.000
+    VAC3               0.739      0.012     61.471      0.000
+    VAC4               0.663      0.013     50.484      0.000
+    VAC5               0.498      0.015     33.211      0.000
+    VAC6               0.517      0.016     32.248      0.000
+    VAC7               0.610      0.015     40.437      0.000
+    VAC8               0.529      0.016     32.115      0.000
+    VAC9               0.388      0.016     23.831      0.000
+    VAC10              0.894      0.007    125.377      0.000
+
+ METHODS  BY
+    VAC4               0.466      0.017     27.136      0.000
+    VAC5               0.478      0.018     25.936      0.000
+    VAC6               0.614      0.015     40.112      0.000
+    VAC7               0.677      0.016     42.265      0.000
+    VAC8               0.558      0.017     33.559      0.000
+    VAC9               0.518      0.017     30.440      0.000
+
+ METHODS  WITH
+    VACCINEL           0.000      0.000    999.000    999.000
+
+ VAC4     WITH
+    VAC5               0.294      0.028     10.605      0.000
+
+ Means
+    VACCINEL          -0.131      0.038     -3.456      0.001
+    METHODS            0.229      0.043      5.380      0.000
+
+ Thresholds
+    VAC1$1            -1.856      0.065    -28.416      0.000
+    VAC1$2            -1.587      0.054    -29.595      0.000
+    VAC1$3            -0.966      0.032    -30.439      0.000
+    VAC1$4             0.031      0.016      1.974      0.048
+    VAC2$1            -1.835      0.050    -36.743      0.000
+    VAC2$2            -1.396      0.036    -39.166      0.000
+    VAC2$3            -0.683      0.022    -30.647      0.000
+    VAC2$4             0.457      0.019     24.276      0.000
+    VAC3$1            -1.882      0.047    -39.686      0.000
+    VAC3$2            -1.345      0.033    -40.677      0.000
+    VAC3$3            -0.562      0.021    -27.093      0.000
+    VAC3$4             0.599      0.021     28.386      0.000
+    VAC4$1            -1.711      0.049    -35.270      0.000
+    VAC4$2            -1.116      0.031    -36.240      0.000
+    VAC4$3            -0.513      0.020    -25.591      0.000
+    VAC4$4             0.380      0.018     20.842      0.000
+    VAC5$1            -1.645      0.042    -38.780      0.000
+    VAC5$2            -1.026      0.027    -37.520      0.000
+    VAC5$3            -0.368      0.019    -19.148      0.000
+    VAC5$4             0.514      0.020     26.017      0.000
+    VAC6$1            -1.276      0.033    -39.079      0.000
+    VAC6$2            -0.497      0.020    -25.148      0.000
+    VAC6$3             0.242      0.018     13.478      0.000
+    VAC6$4             0.974      0.026     37.163      0.000
+    VAC7$1            -1.418      0.043    -33.121      0.000
+    VAC7$2            -0.799      0.027    -29.486      0.000
+    VAC7$3            -0.034      0.019     -1.856      0.063
+    VAC7$4             0.483      0.022     21.545      0.000
+    VAC8$1            -1.154      0.029    -39.374      0.000
+    VAC8$2            -0.351      0.019    -18.637      0.000
+    VAC8$3             0.226      0.018     12.670      0.000
+    VAC8$4             0.918      0.024     37.644      0.000
+    VAC9$1            -1.167      0.028    -41.105      0.000
+    VAC9$2            -0.591      0.021    -28.177      0.000
+    VAC9$3            -0.135      0.018     -7.383      0.000
+    VAC9$4             0.491      0.020     24.725      0.000
+    VAC10$1           -1.938      0.063    -30.929      0.000
+    VAC10$2           -1.503      0.048    -31.214      0.000
+    VAC10$3           -0.807      0.027    -29.682      0.000
+    VAC10$4            0.134      0.016      8.271      0.000
+
+ Variances
+    VACCINEL           1.000      0.000    999.000    999.000
+    METHODS            1.000      0.000    999.000    999.000
+
+ Residual Variances
+    VAC1               0.112      0.010     11.358      0.000
+    VAC2               0.343      0.015     22.820      0.000
+    VAC3               0.454      0.018     25.522      0.000
+    VAC4               0.343      0.015     22.711      0.000
+    VAC5               0.524      0.018     28.673      0.000
+    VAC6               0.356      0.015     24.212      0.000
+    VAC7               0.169      0.012     13.701      0.000
+    VAC8               0.409      0.016     25.878      0.000
+    VAC9               0.581      0.018     32.653      0.000
+    VAC10              0.200      0.013     15.693      0.000
+
+
+R-SQUARE
+
+Group UK
+
+    Observed                                        Two-Tailed     Scale
+    Variable        Estimate       S.E.  Est./S.E.    P-Value     Factors
+
+    VAC1               0.790      0.015     54.423      0.000      0.458
+    VAC2               0.477      0.014     34.605      0.000      0.723
+    VAC3               0.365      0.013     27.579      0.000      0.797
+    VAC4               0.493      0.015     33.140      0.000      0.712
+    VAC5               0.321      0.015     21.646      0.000      0.824
+    VAC6               0.489      0.014     36.034      0.000      0.715
+    VAC7               0.721      0.015     46.561      0.000      0.528
+    VAC8               0.431      0.014     30.931      0.000      0.754
+    VAC9               0.278      0.012     22.353      0.000      0.850
+    VAC10              0.656      0.014     46.019      0.000      0.587
+
+Group US
+
+    Observed                                        Two-Tailed     Scale
+    Variable        Estimate       S.E.  Est./S.E.    P-Value     Factors
+
+    VAC1               0.888      0.010     89.836      0.000      0.335
+    VAC2               0.657      0.015     43.731      0.000      0.586
+    VAC3               0.546      0.018     30.736      0.000      0.674
+    VAC4               0.657      0.015     43.582      0.000      0.585
+    VAC5               0.476      0.018     26.041      0.000      0.724
+    VAC6               0.644      0.015     43.735      0.000      0.597
+    VAC7               0.831      0.012     67.208      0.000      0.412
+    VAC8               0.591      0.016     37.348      0.000      0.640
+    VAC9               0.419      0.018     23.507      0.000      0.763
+    VAC10              0.800      0.013     62.689      0.000      0.447
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.254E-03
+       (ratio of smallest to largest eigenvalue)
+
+
+MODEL MODIFICATION INDICES
+
+NOTE:  Modification indices for direct effects of observed dependent variables
+regressed on covariates and residual covariances among observed dependent
+variables may not be included.  To include these, request MODINDICES (ALL).
+
+Minimum M.I. value for printing the modification index    10.000
+
+                                   M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+Group UK
+
+
+BY Statements
+
+VACCINEL BY VAC2                  10.635     0.023      0.044        0.032
+VACCINEL BY VAC3                  22.413     0.027      0.053        0.042
+VACCINEL BY VAC4                  10.316    -0.021     -0.041       -0.030
+VACCINEL BY VAC8                 152.794    -0.078     -0.151       -0.114
+METHODS  BY VAC1                  15.532    -0.245     -0.147       -0.067
+METHODS  BY VAC7                  10.869     0.218      0.130        0.069
+METHODS  BY VAC8                  12.833    -0.124     -0.074       -0.056
+
+ON/BY Statements
+
+VACCINEL ON VACCINEL /
+VACCINEL BY VACCINEL             999.000     0.000      0.000        0.000
+VACCINEL ON METHODS  /
+METHODS  BY VACCINEL              84.742    -0.541     -0.167       -0.167
+METHODS  ON VACCINEL /
+VACCINEL BY METHODS               84.742    -0.052     -0.167       -0.167
+
+WITH Statements
+
+VAC3     WITH VAC2                71.521     0.207      0.207        0.207
+VAC6     WITH VAC4                11.636    -0.116     -0.116       -0.116
+VAC7     WITH VAC6                28.994     0.224      0.224        0.224
+VAC8     WITH VAC1                32.078    -0.312     -0.312       -0.312
+VAC9     WITH VAC5                10.368     0.076      0.076        0.076
+VAC9     WITH VAC8                18.907    -0.113     -0.113       -0.113
+VAC10    WITH VAC8                22.572    -0.201     -0.201       -0.201
+METHODS  WITH VACCINEL            84.742    -0.194     -0.167       -0.167
+
+Variances/Residual Variances
+
+VAC2                              12.913    -0.205     -0.205       -0.107
+VAC3                              95.741    -0.488     -0.488       -0.310
+VAC8                              36.976     0.345      0.345        0.196
+
+Means/Intercepts/Thresholds
+
+[ VAC1     ]                      14.781    -0.273     -0.273       -0.125
+[ VAC3     ]                      40.427     0.204      0.204        0.162
+[ VAC8     ]                      35.946    -0.173     -0.173       -0.131
+[ VAC1$2   ]                      12.956     0.202      0.202        0.093
+[ VAC3$2   ]                      11.427    -0.092     -0.092       -0.074
+[ VAC3$3   ]                      23.604    -0.089     -0.089       -0.071
+[ VAC8$3   ]                      12.123     0.062      0.062        0.047
+[ VAC8$4   ]                      35.370     0.129      0.129        0.097
+[ VAC9$3   ]                      10.665    -0.055     -0.055       -0.046
+
+Group US
+
+
+BY Statements
+
+VACCINEL BY VAC1                  10.133    -0.096     -0.270       -0.090
+VACCINEL BY VAC2                  10.648    -0.021     -0.059       -0.035
+VACCINEL BY VAC3                  22.444    -0.025     -0.069       -0.047
+VACCINEL BY VAC4                  10.294     0.019      0.054        0.032
+VACCINEL BY VAC8                 152.845     0.057      0.161        0.103
+METHODS  BY VAC1                  40.578     0.343      0.273        0.091
+METHODS  BY VAC3                  49.495    -0.182     -0.145       -0.098
+METHODS  BY VAC7                  10.957    -0.114     -0.091       -0.037
+METHODS  BY VAC8                  12.883     0.093      0.074        0.047
+METHODS  BY VAC10                 58.821     0.305      0.243        0.109
+
+ON/BY Statements
+
+VACCINEL ON VACCINEL /
+VACCINEL BY VACCINEL             999.000     0.000      0.000        0.000
+VACCINEL ON METHODS  /
+METHODS  BY VACCINEL              84.628     0.643      0.182        0.182
+METHODS  ON VACCINEL /
+VACCINEL BY METHODS               84.625     0.052      0.182        0.182
+
+WITH Statements
+
+VAC4     WITH VAC3                14.829    -0.163     -0.163       -0.163
+VAC5     WITH VAC3                14.175    -0.137     -0.137       -0.137
+VAC8     WITH VAC1                18.827     0.395      0.395        0.395
+VAC8     WITH VAC4                45.488     0.304      0.304        0.304
+VAC8     WITH VAC5                22.243     0.180      0.180        0.180
+VAC9     WITH VAC3                14.039    -0.130     -0.130       -0.130
+VAC10    WITH VAC8                30.656     0.372      0.372        0.372
+METHODS  WITH VACCINEL            84.628     0.408      0.182        0.182
+
+Variances/Residual Variances
+
+VAC2                              12.831     0.205      0.205        0.070
+VAC3                              95.564     0.487      0.487        0.221
+VAC8                              37.008    -0.345     -0.345       -0.141
+
+Means/Intercepts/Thresholds
+
+[ VAC1     ]                      14.854     0.274      0.274        0.092
+[ VAC3     ]                      40.474    -0.204     -0.204       -0.137
+[ VAC8     ]                      35.969     0.174      0.174        0.111
+[ VAC1$2   ]                      12.852    -0.537     -0.537       -0.180
+[ VAC3$2   ]                      11.404     0.146      0.146        0.098
+[ VAC3$3   ]                      23.632     0.145      0.145        0.098
+[ VAC8$3   ]                      12.149    -0.101     -0.101       -0.064
+[ VAC8$4   ]                      35.372    -0.220     -0.220       -0.141
+[ VAC9$3   ]                      10.667     0.075      0.075        0.057
+
+
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    c:\users\ts139c\dropbox\grants and applications\vaccineukri_rapid\stackedanalyses\stackedconstrainedfortaiwan.dgm
+
+     Beginning Time:  21:46:44
+        Ending Time:  21:46:45
+       Elapsed Time:  00:00:01
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2019 Muthen & Muthen

@@ -1,0 +1,754 @@
+Mplus VERSION 8.4
+MUTHEN & MUTHEN
+11/18/2020   9:25 PM
+
+INPUT INSTRUCTIONS
+
+  Title:
+    Stata2Mplus conversion for C:\Users\pkb16122\Dropbox\Grants and Applications\VaccineUKRI
+    List of variables converted shown below
+
+    id :
+    weightw8 : weight
+    w8vax1 : Getting vaccines is a good way to protect children from disease.
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w8vax2 : Generally I do what my doctor recommends about vaccines.
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w8vax3 : New vaccines are recommended only if they are safe.
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w8vax4 : Children do not need vaccines for diseases that are not common anymore.
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w8vax5 : Enough children are vaccinated that even unvaccinated children are safe from di
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w8vax6 : I am concerned about serious side effects of vaccines.
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w8vax7 : Some vaccines cause autism in healthy children.
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w8vax8 : Parents should have the right to refuse vaccines required for schools for any r
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w8vax9 : The risks vaccinations pose to children outweigh their health benefits.
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w8vax10 : Vaccinations are one of the most significant achievements in improving public
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    panelw : Case weight - Panel
+    w11weight : Case weight
+    w11vax1 : Getting vaccines is a good way to protect children from disease.
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w11vax2 : Generally, I do what my doctor recommends about vaccines.
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w11vax3 : New vaccines are recommended only if they are safe.
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w11vax4 : Children do not need vaccines for diseases that are not common anymore.
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w11vax5 : Enough children are vaccinated so that even unvaccinated children are safe fro
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w11vax6 : I am concerned about serious side effects of vaccines.
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w11vax7 : Some vaccines cause autism in healthy children
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w11vax8 : Parents should have the right to refuse vaccines required for (not by) schools
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w11vax9 : The risks that vaccinations pose to children outweigh their health benefits.
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w11vax10 : Vaccinations are one of the most significant achievements in improving public
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w8pres :
+    w11pres :
+    bpres :
+    group :
+
+  Data:
+    File is w8w11vaxitems.dat ;
+  Variable:
+    Names are
+       id weightw8 w8vax1 w8vax2 w8vax3 w8vax4 w8vax5 w8vax6 w8vax7 w8vax8
+       w8vax9 w8vax10 panelw w11weight w11vax1 w11vax2 w11vax3 w11vax4 w11vax5
+       w11vax6 w11vax7 w11vax8 w11vax9 w11vax10 w8pres w11pres bpres group;
+       Usevariables are w11vax1-w11vax10;
+       Categorical are w11vax1-w11vax10;
+
+       idvariable is id;
+       weight is w11weight;
+
+    Missing are all (-9999) ;
+  Analysis:
+   Estimator is wlsmv;
+
+
+  Model:
+
+  VaccineL by w11vax1-w11vax10;
+  Methods by w11vax4-w11vax9;
+  Methods with VaccineL@0;
+  w11vax4 with w11vax5;
+
+
+  Output:
+
+  Mod(10);
+  StdY;
+
+
+
+*** WARNING
+  Input line exceeded 90 characters. Some input may be truncated.
+    Stata2Mplus conversion for C:\Users\pkb16122\Dropbox\Grants and Applications\VaccineUKRI_
+*** WARNING
+  Input line exceeded 90 characters. Some input may be truncated.
+    w8vax5 : Enough children are vaccinated that even unvaccinated children are safe from dis
+*** WARNING
+  Input line exceeded 90 characters. Some input may be truncated.
+    w8vax8 : Parents should have the right to refuse vaccines required for schools for any re
+*** WARNING
+  Input line exceeded 90 characters. Some input may be truncated.
+    w8vax10 : Vaccinations are one of the most significant achievements in improving public h
+*** WARNING
+  Input line exceeded 90 characters. Some input may be truncated.
+    w11vax5 : Enough children are vaccinated so that even unvaccinated children are safe from
+*** WARNING
+  Data set contains cases with missing on all variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on all variables:  5394
+   6 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+
+Stata2Mplus conversion for C:\Users\pkb16122\Dropbox\Grants and Applications\VaccineUKRI
+List of variables converted shown below
+
+id :
+weightw8 : weight
+w8vax1 : Getting vaccines is a good way to protect children from disease.
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+w8vax2 : Generally I do what my doctor recommends about vaccines.
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+w8vax3 : New vaccines are recommended only if they are safe.
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+w8vax4 : Children do not need vaccines for diseases that are not common anymore.
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+w8vax5 : Enough children are vaccinated that even unvaccinated children are safe from di
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+w8vax6 : I am concerned about serious side effects of vaccines.
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+w8vax7 : Some vaccines cause autism in healthy children.
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+w8vax8 : Parents should have the right to refuse vaccines required for schools for any r
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+w8vax9 : The risks vaccinations pose to children outweigh their health benefits.
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+w8vax10 : Vaccinations are one of the most significant achievements in improving public
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+panelw : Case weight - Panel
+w11weight : Case weight
+w11vax1 : Getting vaccines is a good way to protect children from disease.
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+w11vax2 : Generally, I do what my doctor recommends about vaccines.
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+w11vax3 : New vaccines are recommended only if they are safe.
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+w11vax4 : Children do not need vaccines for diseases that are not common anymore.
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+w11vax5 : Enough children are vaccinated so that even unvaccinated children are safe fro
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+w11vax6 : I am concerned about serious side effects of vaccines.
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+w11vax7 : Some vaccines cause autism in healthy children
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+w11vax8 : Parents should have the right to refuse vaccines required for (not by) schools
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+w11vax9 : The risks that vaccinations pose to children outweigh their health benefits.
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+w11vax10 : Vaccinations are one of the most significant achievements in improving public
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                        5004
+
+Number of dependent variables                                   10
+Number of independent variables                                  0
+Number of continuous latent variables                            2
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   W11VAX1     W11VAX2     W11VAX3     W11VAX4     W11VAX5     W11VAX6
+   W11VAX7     W11VAX8     W11VAX9     W11VAX10
+
+Continuous latent variables
+   VACCINEL    METHODS
+
+Variables with special functions
+
+  Weight variable       W11WEIGH
+  ID variable           ID
+
+Estimator                                                    WLSMV
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Parameterization                                             DELTA
+Link                                                        PROBIT
+
+Input data file(s)
+  w8w11vaxitems.dat
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns           178
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              W11VAX1       W11VAX2       W11VAX3       W11VAX4       W11VAX5
+              ________      ________      ________      ________      ________
+ W11VAX1        0.990
+ W11VAX2        0.981         0.989
+ W11VAX3        0.933         0.930         0.937
+ W11VAX4        0.959         0.956         0.915         0.964
+ W11VAX5        0.953         0.949         0.910         0.936         0.955
+ W11VAX6        0.975         0.975         0.928         0.953         0.944
+ W11VAX7        0.831         0.829         0.809         0.820         0.818
+ W11VAX8        0.963         0.960         0.917         0.943         0.935
+ W11VAX9        0.948         0.945         0.906         0.931         0.924
+ W11VAX10       0.977         0.975         0.927         0.954         0.947
+
+
+           Covariance Coverage
+              W11VAX6       W11VAX7       W11VAX8       W11VAX9       W11VAX10
+              ________      ________      ________      ________      ________
+ W11VAX6        0.983
+ W11VAX7        0.828         0.833
+ W11VAX8        0.957         0.821         0.969
+ W11VAX9        0.943         0.821         0.933         0.951
+ W11VAX10       0.970         0.828         0.958         0.944         0.981
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+    W11VAX1
+      Category 1    0.025          124.354
+      Category 2    0.026          129.593
+      Category 3    0.141          696.013
+      Category 4    0.323         1596.323
+      Category 5    0.486         2403.056
+    W11VAX2
+      Category 1    0.040          197.437
+      Category 2    0.054          264.937
+      Category 3    0.202          995.190
+      Category 4    0.404         1990.392
+      Category 5    0.301         1482.987
+    W11VAX3
+      Category 1    0.053          247.684
+      Category 2    0.090          416.868
+      Category 3    0.268         1246.410
+      Category 4    0.380         1767.856
+      Category 5    0.210          978.729
+    W11VAX4
+      Category 1    0.043          208.083
+      Category 2    0.070          336.225
+      Category 3    0.193          925.532
+      Category 4    0.278         1334.520
+      Category 5    0.415         1993.269
+    W11VAX5
+      Category 1    0.052          246.487
+      Category 2    0.090          426.998
+      Category 3    0.216         1021.959
+      Category 4    0.289         1369.489
+      Category 5    0.353         1672.809
+    W11VAX6
+      Category 1    0.116          569.101
+      Category 2    0.217         1065.113
+      Category 3    0.260         1273.253
+      Category 4    0.213         1044.115
+      Category 5    0.195          954.524
+    W11VAX7
+      Category 1    0.062          257.733
+      Category 2    0.109          453.118
+      Category 3    0.300         1241.073
+      Category 4    0.182          754.528
+      Category 5    0.346         1433.343
+    W11VAX8
+      Category 1    0.125          599.878
+      Category 2    0.165          793.076
+      Category 3    0.211         1016.382
+      Category 4    0.229         1103.258
+      Category 5    0.270         1300.060
+    W11VAX9
+      Category 1    0.106          499.431
+      Category 2    0.120          563.952
+      Category 3    0.228         1071.467
+      Category 4    0.216         1014.718
+      Category 5    0.331         1555.329
+    W11VAX10
+      Category 1    0.022          107.922
+      Category 2    0.040          196.503
+      Category 3    0.184          897.922
+      Category 4    0.338         1648.408
+      Category 5    0.416         2029.344
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       57
+
+Chi-Square Test of Model Fit
+
+          Value                            432.426*
+          Degrees of Freedom                    28
+          P-Value                           0.0000
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.054
+          90 Percent C.I.                    0.049  0.058
+          Probability RMSEA <= .05           0.082
+
+CFI/TLI
+
+          CFI                                0.988
+          TLI                                0.980
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                          32606.121
+          Degrees of Freedom                    45
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.021
+
+Optimum Function Value for Weighted Least-Squares Estimator
+
+          Value                     0.16355475D-01
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ VACCINEL BY
+    W11VAX1            1.000      0.000    999.000    999.000
+    W11VAX2            0.837      0.011     77.993      0.000
+    W11VAX3            0.693      0.015     47.249      0.000
+    W11VAX4            0.727      0.014     50.147      0.000
+    W11VAX5            0.479      0.019     25.364      0.000
+    W11VAX6            0.598      0.017     35.067      0.000
+    W11VAX7            0.671      0.017     40.296      0.000
+    W11VAX8            0.644      0.017     38.639      0.000
+    W11VAX9            0.409      0.018     22.121      0.000
+    W11VAX10           0.953      0.011     87.462      0.000
+
+ METHODS  BY
+    W11VAX4            1.000      0.000    999.000    999.000
+    W11VAX5            0.925      0.042     21.793      0.000
+    W11VAX6            1.198      0.048     24.926      0.000
+    W11VAX7            1.338      0.049     27.375      0.000
+    W11VAX8            1.181      0.046     25.752      0.000
+    W11VAX9            1.008      0.044     23.004      0.000
+
+ METHODS  WITH
+    VACCINEL           0.000      0.000    999.000    999.000
+
+ W11VAX4  WITH
+    W11VAX5            0.139      0.013     10.966      0.000
+
+ Thresholds
+    W11VAX1$1         -1.958      0.062    -31.708      0.000
+    W11VAX1$2         -1.632      0.047    -35.063      0.000
+    W11VAX1$3         -0.871      0.032    -26.988      0.000
+    W11VAX1$4          0.036      0.026      1.406      0.160
+    W11VAX2$1         -1.750      0.046    -37.875      0.000
+    W11VAX2$2         -1.318      0.036    -36.550      0.000
+    W11VAX2$3         -0.537      0.029    -18.803      0.000
+    W11VAX2$4          0.522      0.026     19.850      0.000
+    W11VAX3$1         -1.615      0.043    -37.245      0.000
+    W11VAX3$2         -1.068      0.033    -32.548      0.000
+    W11VAX3$3         -0.227      0.027     -8.375      0.000
+    W11VAX3$4          0.806      0.029     27.678      0.000
+    W11VAX4$1         -1.713      0.054    -31.734      0.000
+    W11VAX4$2         -1.208      0.037    -32.823      0.000
+    W11VAX4$3         -0.506      0.029    -17.636      0.000
+    W11VAX4$4          0.213      0.026      8.198      0.000
+    W11VAX5$1         -1.626      0.052    -31.477      0.000
+    W11VAX5$2         -1.071      0.036    -29.882      0.000
+    W11VAX5$3         -0.364      0.028    -12.975      0.000
+    W11VAX5$4          0.377      0.026     14.709      0.000
+    W11VAX6$1         -1.195      0.035    -34.227      0.000
+    W11VAX6$2         -0.431      0.027    -15.876      0.000
+    W11VAX6$3          0.234      0.026      9.137      0.000
+    W11VAX6$4          0.861      0.029     30.191      0.000
+    W11VAX7$1         -1.536      0.045    -34.270      0.000
+    W11VAX7$2         -0.947      0.033    -28.334      0.000
+    W11VAX7$3         -0.071      0.028     -2.527      0.012
+    W11VAX7$4          0.396      0.028     14.022      0.000
+    W11VAX8$1         -1.152      0.035    -33.038      0.000
+    W11VAX8$2         -0.555      0.028    -19.642      0.000
+    W11VAX8$3          0.002      0.026      0.060      0.952
+    W11VAX8$4          0.612      0.027     22.937      0.000
+    W11VAX9$1         -1.247      0.035    -35.277      0.000
+    W11VAX9$2         -0.752      0.029    -25.765      0.000
+    W11VAX9$3         -0.116      0.026     -4.400      0.000
+    W11VAX9$4          0.438      0.026     16.909      0.000
+    W11VAX10$1        -2.012      0.053    -37.699      0.000
+    W11VAX10$2        -1.535      0.042    -36.714      0.000
+    W11VAX10$3        -0.686      0.031    -22.384      0.000
+    W11VAX10$4         0.213      0.026      8.318      0.000
+
+ Variances
+    VACCINEL           0.866      0.014     64.004      0.000
+    METHODS            0.212      0.017     12.781      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDY Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ VACCINEL BY
+    W11VAX1            0.931      0.007    128.008      0.000
+    W11VAX2            0.779      0.009     85.067      0.000
+    W11VAX3            0.645      0.013     47.993      0.000
+    W11VAX4            0.676      0.013     51.079      0.000
+    W11VAX5            0.446      0.017     26.105      0.000
+    W11VAX6            0.556      0.015     36.048      0.000
+    W11VAX7            0.625      0.015     40.491      0.000
+    W11VAX8            0.600      0.015     40.182      0.000
+    W11VAX9            0.381      0.017     22.222      0.000
+    W11VAX10           0.886      0.007    122.105      0.000
+
+ METHODS  BY
+    W11VAX4            0.461      0.018     25.562      0.000
+    W11VAX5            0.426      0.022     19.645      0.000
+    W11VAX6            0.552      0.016     35.219      0.000
+    W11VAX7            0.616      0.016     37.702      0.000
+    W11VAX8            0.544      0.015     35.431      0.000
+    W11VAX9            0.464      0.017     27.540      0.000
+
+ METHODS  WITH
+    VACCINEL           0.000      0.000    999.000    999.000
+
+ W11VAX4  WITH
+    W11VAX5            0.308      0.024     12.779      0.000
+
+ Thresholds
+    W11VAX1$1         -1.958      0.062    -31.708      0.000
+    W11VAX1$2         -1.632      0.047    -35.063      0.000
+    W11VAX1$3         -0.871      0.032    -26.988      0.000
+    W11VAX1$4          0.036      0.026      1.406      0.160
+    W11VAX2$1         -1.750      0.046    -37.875      0.000
+    W11VAX2$2         -1.318      0.036    -36.550      0.000
+    W11VAX2$3         -0.537      0.029    -18.803      0.000
+    W11VAX2$4          0.522      0.026     19.850      0.000
+    W11VAX3$1         -1.615      0.043    -37.245      0.000
+    W11VAX3$2         -1.068      0.033    -32.548      0.000
+    W11VAX3$3         -0.227      0.027     -8.375      0.000
+    W11VAX3$4          0.806      0.029     27.678      0.000
+    W11VAX4$1         -1.713      0.054    -31.734      0.000
+    W11VAX4$2         -1.208      0.037    -32.823      0.000
+    W11VAX4$3         -0.506      0.029    -17.636      0.000
+    W11VAX4$4          0.213      0.026      8.198      0.000
+    W11VAX5$1         -1.626      0.052    -31.477      0.000
+    W11VAX5$2         -1.071      0.036    -29.882      0.000
+    W11VAX5$3         -0.364      0.028    -12.975      0.000
+    W11VAX5$4          0.377      0.026     14.709      0.000
+    W11VAX6$1         -1.195      0.035    -34.227      0.000
+    W11VAX6$2         -0.431      0.027    -15.876      0.000
+    W11VAX6$3          0.234      0.026      9.137      0.000
+    W11VAX6$4          0.861      0.029     30.191      0.000
+    W11VAX7$1         -1.536      0.045    -34.270      0.000
+    W11VAX7$2         -0.947      0.033    -28.334      0.000
+    W11VAX7$3         -0.071      0.028     -2.527      0.012
+    W11VAX7$4          0.396      0.028     14.022      0.000
+    W11VAX8$1         -1.152      0.035    -33.038      0.000
+    W11VAX8$2         -0.555      0.028    -19.642      0.000
+    W11VAX8$3          0.002      0.026      0.060      0.952
+    W11VAX8$4          0.612      0.027     22.937      0.000
+    W11VAX9$1         -1.247      0.035    -35.277      0.000
+    W11VAX9$2         -0.752      0.029    -25.765      0.000
+    W11VAX9$3         -0.116      0.026     -4.400      0.000
+    W11VAX9$4          0.438      0.026     16.909      0.000
+    W11VAX10$1        -2.012      0.053    -37.699      0.000
+    W11VAX10$2        -1.535      0.042    -36.714      0.000
+    W11VAX10$3        -0.686      0.031    -22.384      0.000
+    W11VAX10$4         0.213      0.026      8.318      0.000
+
+ Variances
+    VACCINEL           1.000      0.000    999.000    999.000
+    METHODS            1.000      0.000    999.000    999.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed   Residual
+    Variable        Estimate       S.E.  Est./S.E.    P-Value    Variance
+
+    W11VAX1            0.866      0.014     64.004      0.000      0.134
+    W11VAX2            0.607      0.014     42.533      0.000      0.393
+    W11VAX3            0.415      0.017     23.997      0.000      0.585
+    W11VAX4            0.669      0.015     44.165      0.000      0.331
+    W11VAX5            0.380      0.019     19.817      0.000      0.620
+    W11VAX6            0.614      0.015     40.197      0.000      0.386
+    W11VAX7            0.770      0.014     54.246      0.000      0.230
+    W11VAX8            0.656      0.015     43.215      0.000      0.344
+    W11VAX9            0.360      0.016     22.205      0.000      0.640
+    W11VAX10           0.786      0.013     61.053      0.000      0.214
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.653E-03
+       (ratio of smallest to largest eigenvalue)
+
+
+MODEL MODIFICATION INDICES
+
+NOTE:  Modification indices for direct effects of observed dependent variables
+regressed on covariates and residual covariances among observed dependent
+variables may not be included.  To include these, request MODINDICES (ALL).
+
+Minimum M.I. value for printing the modification index    10.000
+
+                                   M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+
+BY Statements
+
+METHODS  BY W11VAX1               30.691     0.163      0.075        0.075
+METHODS  BY W11VAX2               31.325    -0.143     -0.066       -0.066
+METHODS  BY W11VAX3               82.582    -0.233     -0.107       -0.107
+METHODS  BY W11VAX10              49.109     0.195      0.090        0.090
+
+WITH Statements
+
+W11VAX3  WITH W11VAX2            105.180     0.106      0.106        0.221
+W11VAX4  WITH W11VAX1             17.714     0.048      0.048        0.230
+W11VAX4  WITH W11VAX2             10.599    -0.038     -0.038       -0.105
+W11VAX4  WITH W11VAX3             29.307    -0.067     -0.067       -0.153
+W11VAX5  WITH W11VAX1             26.246     0.067      0.067        0.231
+W11VAX5  WITH W11VAX2             13.572    -0.047     -0.047       -0.096
+W11VAX5  WITH W11VAX3             40.851    -0.085     -0.085       -0.141
+W11VAX6  WITH W11VAX4             33.448    -0.069     -0.069       -0.193
+W11VAX6  WITH W11VAX5             65.284    -0.106     -0.106       -0.217
+W11VAX7  WITH W11VAX6             60.877     0.094      0.094        0.314
+W11VAX8  WITH W11VAX4             31.301     0.060      0.060        0.178
+W11VAX8  WITH W11VAX5             33.232     0.070      0.070        0.152
+W11VAX8  WITH W11VAX7             32.774    -0.071     -0.071       -0.254
+W11VAX9  WITH W11VAX3             51.021    -0.090     -0.090       -0.148
+W11VAX9  WITH W11VAX8             17.840    -0.050     -0.050       -0.107
+W11VAX10 WITH W11VAX1             33.425    -0.060     -0.060       -0.354
+
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    c:\users\ts139c\dropbox\grants and applications\vaccineukri_rapid\usvaccinework\w11usa2.dgm
+
+     Beginning Time:  21:25:04
+        Ending Time:  21:25:04
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2019 Muthen & Muthen
