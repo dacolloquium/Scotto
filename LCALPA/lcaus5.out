@@ -1,0 +1,1311 @@
+Mplus VERSION 8.4
+MUTHEN & MUTHEN
+11/18/2020  11:34 PM
+
+INPUT INSTRUCTIONS
+
+  Title:
+    Stata2Mplus conversion for C:\Users\pkb16122\Dropbox\Grants and Applications\VaccineUKRI
+    List of variables converted shown below
+
+    id :
+    weightw8 : weight
+    w8vax1 : Getting vaccines is a good way to protect children from disease.
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w8vax2 : Generally I do what my doctor recommends about vaccines.
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w8vax3 : New vaccines are recommended only if they are safe.
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w8vax4 : Children do not need vaccines for diseases that are not common anymore.
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w8vax5 : Enough children are vaccinated that even unvaccinated children are safe from di
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w8vax6 : I am concerned about serious side effects of vaccines.
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w8vax7 : Some vaccines cause autism in healthy children.
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w8vax8 : Parents should have the right to refuse vaccines required for schools for any r
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w8vax9 : The risks vaccinations pose to children outweigh their health benefits.
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w8vax10 : Vaccinations are one of the most significant achievements in improving public
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    panelw : Case weight - Panel
+    w11weight : Case weight
+    w11vax1 : Getting vaccines is a good way to protect children from disease.
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w11vax2 : Generally, I do what my doctor recommends about vaccines.
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w11vax3 : New vaccines are recommended only if they are safe.
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w11vax4 : Children do not need vaccines for diseases that are not common anymore.
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w11vax5 : Enough children are vaccinated so that even unvaccinated children are safe fro
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w11vax6 : I am concerned about serious side effects of vaccines.
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w11vax7 : Some vaccines cause autism in healthy children
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w11vax8 : Parents should have the right to refuse vaccines required for (not by) schools
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w11vax9 : The risks that vaccinations pose to children outweigh their health benefits.
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w11vax10 : Vaccinations are one of the most significant achievements in improving public
+      1: Strongly agree
+      2: Agree
+      3: Neither agree nor disagree
+      4: Disagree
+      5: Strongly disagree
+    w8pres :
+    w11pres :
+    bpres :
+    group :
+
+  Data:
+    File is w8w11vaxitems.dat ;
+  Variable:
+    Names are
+       id weightw8 w8vax1 w8vax2 w8vax3 w8vax4 w8vax5 w8vax6 w8vax7 w8vax8
+       w8vax9 w8vax10 panelw w11weight w11vax1 w11vax2 w11vax3 w11vax4 w11vax5
+       w11vax6 w11vax7 w11vax8 w11vax9 w11vax10 w8pres w11pres bpres group;
+       Usevariables are w11vax4-w11vax9;
+       Categorical are w11vax4-w11vax9;
+
+       idvariable is id;
+       weight is w11weight;
+       classes is c(5);
+    Missing are all (-9999) ;
+  Analysis:
+    Type = mixture ;
+
+
+
+*** WARNING
+  Input line exceeded 90 characters. Some input may be truncated.
+    Stata2Mplus conversion for C:\Users\pkb16122\Dropbox\Grants and Applications\VaccineUKRI_
+*** WARNING
+  Input line exceeded 90 characters. Some input may be truncated.
+    w8vax5 : Enough children are vaccinated that even unvaccinated children are safe from dis
+*** WARNING
+  Input line exceeded 90 characters. Some input may be truncated.
+    w8vax8 : Parents should have the right to refuse vaccines required for schools for any re
+*** WARNING
+  Input line exceeded 90 characters. Some input may be truncated.
+    w8vax10 : Vaccinations are one of the most significant achievements in improving public h
+*** WARNING
+  Input line exceeded 90 characters. Some input may be truncated.
+    w11vax5 : Enough children are vaccinated so that even unvaccinated children are safe from
+*** WARNING
+  Data set contains cases with missing on all variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on all variables:  5401
+   6 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+
+Stata2Mplus conversion for C:\Users\pkb16122\Dropbox\Grants and Applications\VaccineUKRI
+List of variables converted shown below
+
+id :
+weightw8 : weight
+w8vax1 : Getting vaccines is a good way to protect children from disease.
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+w8vax2 : Generally I do what my doctor recommends about vaccines.
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+w8vax3 : New vaccines are recommended only if they are safe.
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+w8vax4 : Children do not need vaccines for diseases that are not common anymore.
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+w8vax5 : Enough children are vaccinated that even unvaccinated children are safe from di
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+w8vax6 : I am concerned about serious side effects of vaccines.
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+w8vax7 : Some vaccines cause autism in healthy children.
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+w8vax8 : Parents should have the right to refuse vaccines required for schools for any r
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+w8vax9 : The risks vaccinations pose to children outweigh their health benefits.
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+w8vax10 : Vaccinations are one of the most significant achievements in improving public
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+panelw : Case weight - Panel
+w11weight : Case weight
+w11vax1 : Getting vaccines is a good way to protect children from disease.
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+w11vax2 : Generally, I do what my doctor recommends about vaccines.
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+w11vax3 : New vaccines are recommended only if they are safe.
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+w11vax4 : Children do not need vaccines for diseases that are not common anymore.
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+w11vax5 : Enough children are vaccinated so that even unvaccinated children are safe fro
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+w11vax6 : I am concerned about serious side effects of vaccines.
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+w11vax7 : Some vaccines cause autism in healthy children
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+w11vax8 : Parents should have the right to refuse vaccines required for (not by) schools
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+w11vax9 : The risks that vaccinations pose to children outweigh their health benefits.
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+w11vax10 : Vaccinations are one of the most significant achievements in improving public
+1: Strongly agree
+2: Agree
+3: Neither agree nor disagree
+4: Disagree
+5: Strongly disagree
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                        4997
+
+Number of dependent variables                                    6
+Number of independent variables                                  0
+Number of continuous latent variables                            0
+Number of categorical latent variables                           1
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   W11VAX4     W11VAX5     W11VAX6     W11VAX7     W11VAX8     W11VAX9
+
+Categorical latent variables
+   C
+
+Variables with special functions
+
+  Weight variable       W11WEIGH
+  ID variable           ID
+
+Estimator                                                      MLR
+Information matrix                                        OBSERVED
+Optimization Specifications for the Quasi-Newton Algorithm for
+Continuous Outcomes
+  Maximum number of iterations                                 100
+  Convergence criterion                                  0.100D-05
+Optimization Specifications for the EM Algorithm
+  Maximum number of iterations                                 500
+  Convergence criteria
+    Loglikelihood change                                 0.100D-06
+    Relative loglikelihood change                        0.100D-06
+    Derivative                                           0.100D-05
+Optimization Specifications for the M step of the EM Algorithm for
+Categorical Latent variables
+  Number of M step iterations                                    1
+  M step convergence criterion                           0.100D-05
+  Basis for M step termination                           ITERATION
+Optimization Specifications for the M step of the EM Algorithm for
+Censored, Binary or Ordered Categorical (Ordinal), Unordered
+Categorical (Nominal) and Count Outcomes
+  Number of M step iterations                                    1
+  M step convergence criterion                           0.100D-05
+  Basis for M step termination                           ITERATION
+  Maximum value for logit thresholds                            15
+  Minimum value for logit thresholds                           -15
+  Minimum expected cell size for chi-square              0.100D-01
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Optimization algorithm                                         EMA
+Random Starts Specifications
+  Number of initial stage random starts                         20
+  Number of final stage optimizations                            4
+  Number of initial stage iterations                            10
+  Initial stage convergence criterion                    0.100D+01
+  Random starts scale                                    0.500D+01
+  Random seed for generating random starts                       0
+Link                                                         LOGIT
+
+Input data file(s)
+  w8w11vaxitems.dat
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns            51
+     Number of y missing data patterns           0
+     Number of u missing data patterns          51
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT FOR U
+
+
+           Covariance Coverage
+              W11VAX4       W11VAX5       W11VAX6       W11VAX7       W11VAX8
+              ________      ________      ________      ________      ________
+ W11VAX4        0.965
+ W11VAX5        0.937         0.957
+ W11VAX6        0.955         0.946         0.985
+ W11VAX7        0.821         0.819         0.829         0.835
+ W11VAX8        0.944         0.937         0.959         0.822         0.970
+ W11VAX9        0.933         0.925         0.944         0.822         0.934
+
+
+           Covariance Coverage
+              W11VAX9
+              ________
+ W11VAX9        0.952
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+    W11VAX4
+      Category 1    0.043          207.931
+      Category 2    0.070          335.978
+      Category 3    0.193          924.855
+      Category 4    0.278         1333.543
+      Category 5    0.415         1991.809
+    W11VAX5
+      Category 1    0.052          246.307
+      Category 2    0.090          426.685
+      Category 3    0.216         1021.211
+      Category 4    0.289         1368.486
+      Category 5    0.353         1671.584
+    W11VAX6
+      Category 1    0.116          568.684
+      Category 2    0.217         1064.333
+      Category 3    0.260         1272.320
+      Category 4    0.213         1043.350
+      Category 5    0.195          953.825
+    W11VAX7
+      Category 1    0.062          257.545
+      Category 2    0.109          452.786
+      Category 3    0.300         1240.164
+      Category 4    0.182          753.976
+      Category 5    0.346         1432.293
+    W11VAX8
+      Category 1    0.125          599.439
+      Category 2    0.165          792.496
+      Category 3    0.211         1015.638
+      Category 4    0.229         1102.450
+      Category 5    0.270         1299.108
+    W11VAX9
+      Category 1    0.106          499.065
+      Category 2    0.120          563.539
+      Category 3    0.228         1070.683
+      Category 4    0.216         1013.975
+      Category 5    0.331         1554.190
+
+
+RANDOM STARTS RESULTS RANKED FROM THE BEST TO THE WORST LOGLIKELIHOOD VALUES
+
+Final stage loglikelihood values at local maxima, seeds, and initial stage start numbers:
+
+          -33639.389  573096           20
+          -33639.420  608496           4
+          -33639.420  unperturbed      0
+          -33639.420  903420           5
+
+
+
+THE BEST LOGLIKELIHOOD VALUE HAS BEEN REPLICATED.  RERUN WITH AT LEAST TWICE THE
+RANDOM STARTS TO CHECK THAT THE BEST LOGLIKELIHOOD IS STILL OBTAINED AND REPLICATED.
+
+     IN THE OPTIMIZATION, ONE OR MORE LOGIT THRESHOLDS APPROACHED EXTREME VALUES
+     OF -15.000 AND 15.000 AND WERE FIXED TO STABILIZE MODEL ESTIMATION.  THESE
+     VALUES IMPLY PROBABILITIES OF 0 AND 1.  IN THE MODEL RESULTS SECTION, THESE
+     PARAMETERS HAVE 0 STANDARD ERRORS AND 999 IN THE Z-SCORE AND P-VALUE COLUMNS.
+
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                      124
+
+Loglikelihood
+
+          H0 Value                      -33639.389
+          H0 Scaling Correction Factor      2.4095
+            for MLR
+
+Information Criteria
+
+          Akaike (AIC)                   67526.777
+          Bayesian (BIC)                 68334.835
+          Sample-Size Adjusted BIC       67940.806
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit for the Binary and Ordered Categorical
+(Ordinal) Outcomes**
+
+          Pearson Chi-Square
+
+          Value                          14107.630
+          Degrees of Freedom                 15430
+          P-Value                           1.0000
+
+          Likelihood Ratio Chi-Square
+
+          Value                           8518.219
+          Degrees of Freedom                 15430
+          P-Value                           1.0000
+
+** Of the 45175 cells in the latent class indicator table, 70
+   were deleted in the calculation of chi-square due to extreme values.
+
+Chi-Square Test for MCAR under the Unrestricted Latent Class Indicator Model
+
+          Pearson Chi-Square
+
+          Value                          13991.135
+          Degrees of Freedom                 29500
+          P-Value                           1.0000
+
+          Likelihood Ratio Chi-Square
+
+          Value                          11151.167
+          Degrees of Freedom                 29500
+          P-Value                           1.0000
+
+
+
+FINAL CLASS COUNTS AND PROPORTIONS FOR THE LATENT CLASSES
+BASED ON THE ESTIMATED MODEL
+
+    Latent
+   Classes
+
+       1       1747.37088          0.34968
+       2        346.78788          0.06940
+       3        393.85992          0.07882
+       4       1569.09870          0.31401
+       5        939.88262          0.18809
+
+
+FINAL CLASS COUNTS AND PROPORTIONS FOR THE LATENT CLASSES
+BASED ON ESTIMATED POSTERIOR PROBABILITIES
+
+    Latent
+   Classes
+
+       1       1747.37088          0.34968
+       2        346.78788          0.06940
+       3        393.85992          0.07882
+       4       1569.09870          0.31401
+       5        939.88262          0.18809
+
+
+FINAL CLASS COUNTS AND PROPORTIONS FOR THE LATENT CLASSES
+BASED ON THEIR MOST LIKELY LATENT CLASS MEMBERSHIP
+
+Class Counts and Proportions
+
+    Latent
+   Classes
+
+       1             1732          0.34670
+       2              346          0.06932
+       3              401          0.08033
+       4             1582          0.31652
+       5              935          0.18713
+
+
+CLASSIFICATION QUALITY
+
+     Entropy                         0.857
+
+
+Classification Probabilities for the Most Likely Latent Class Membership (Column)
+by Latent Class (Row)
+
+           1        2        3        4        5
+
+    1   0.942    0.005    0.000    0.052    0.001
+    2   0.016    0.892    0.001    0.009    0.082
+    3   0.000    0.001    0.947    0.018    0.033
+    4   0.050    0.002    0.006    0.892    0.050
+    5   0.001    0.027    0.019    0.088    0.865
+
+
+Logits for the Classification Probabilities for the Most Likely Latent Class Membership (Column)
+by Latent Class (Row)
+
+              1        2        3        4        5
+
+    1      6.754    1.546   -2.624    3.848    0.000
+    2     -1.638    2.382   -4.694   -2.245    0.000
+    3     -5.134   -4.031    3.345   -0.598    0.000
+    4      0.010   -3.483   -2.067    2.881    0.000
+    5     -6.412   -3.467   -3.815   -2.290    0.000
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Latent Class 1
+
+ Thresholds
+    W11VAX4$1         -5.390      0.483    -11.163      0.000
+    W11VAX4$2         -4.476      0.340    -13.166      0.000
+    W11VAX4$3         -3.904      0.270    -14.451      0.000
+    W11VAX4$4         -2.071      0.140    -14.812      0.000
+    W11VAX5$1         -3.399      0.267    -12.727      0.000
+    W11VAX5$2         -2.734      0.179    -15.249      0.000
+    W11VAX5$3         -2.185      0.143    -15.248      0.000
+    W11VAX5$4         -0.947      0.090    -10.571      0.000
+    W11VAX6$1         -3.542      0.330    -10.741      0.000
+    W11VAX6$2         -2.487      0.185    -13.448      0.000
+    W11VAX6$3         -1.435      0.120    -11.931      0.000
+    W11VAX6$4         -0.040      0.087     -0.467      0.640
+    W11VAX7$1         -5.227      0.610     -8.564      0.000
+    W11VAX7$2         -4.576      0.436    -10.485      0.000
+    W11VAX7$3         -2.455      0.187    -13.145      0.000
+    W11VAX7$4         -1.299      0.110    -11.781      0.000
+    W11VAX8$1         -3.548      0.242    -14.676      0.000
+    W11VAX8$2         -2.717      0.164    -16.534      0.000
+    W11VAX8$3         -2.076      0.136    -15.281      0.000
+    W11VAX8$4         -0.705      0.096     -7.311      0.000
+    W11VAX9$1         -1.735      0.095    -18.234      0.000
+    W11VAX9$2         -1.486      0.088    -16.822      0.000
+    W11VAX9$3         -1.404      0.095    -14.803      0.000
+    W11VAX9$4         -1.173      0.101    -11.655      0.000
+
+Latent Class 2
+
+ Thresholds
+    W11VAX4$1         -0.397      0.230     -1.726      0.084
+    W11VAX4$2          0.487      0.246      1.982      0.048
+    W11VAX4$3          1.082      0.320      3.383      0.001
+    W11VAX4$4          1.385      0.370      3.745      0.000
+    W11VAX5$1         -0.680      0.214     -3.174      0.002
+    W11VAX5$2         -0.248      0.204     -1.219      0.223
+    W11VAX5$3          0.674      0.261      2.583      0.010
+    W11VAX5$4          1.077      0.313      3.438      0.001
+    W11VAX6$1          1.626      0.352      4.625      0.000
+    W11VAX6$2          2.168      0.486      4.459      0.000
+    W11VAX6$3          3.388      0.681      4.972      0.000
+    W11VAX6$4          3.388      0.681      4.972      0.000
+    W11VAX7$1          0.962      0.338      2.850      0.004
+    W11VAX7$2          1.849      0.401      4.607      0.000
+    W11VAX7$3          3.253      0.872      3.732      0.000
+    W11VAX7$4          3.358      0.903      3.719      0.000
+    W11VAX8$1          1.609      0.406      3.959      0.000
+    W11VAX8$2          2.406      0.565      4.262      0.000
+    W11VAX8$3          2.868      0.707      4.058      0.000
+    W11VAX8$4          3.310      1.012      3.270      0.001
+    W11VAX9$1          0.129      0.244      0.530      0.596
+    W11VAX9$2          0.959      0.233      4.114      0.000
+    W11VAX9$3          1.534      0.252      6.089      0.000
+    W11VAX9$4          1.739      0.288      6.032      0.000
+
+Latent Class 3
+
+ Thresholds
+    W11VAX4$1        -15.000      0.000    999.000    999.000
+    W11VAX4$2         -5.882      1.740     -3.381      0.001
+    W11VAX4$3          3.104      0.506      6.136      0.000
+    W11VAX4$4          3.776      0.725      5.209      0.000
+    W11VAX5$1         -4.545      1.867     -2.435      0.015
+    W11VAX5$2         -3.812      1.029     -3.704      0.000
+    W11VAX5$3          3.333      0.605      5.505      0.000
+    W11VAX5$4          6.193      1.433      4.321      0.000
+    W11VAX6$1         -4.152      0.893     -4.649      0.000
+    W11VAX6$2         -3.156      0.586     -5.389      0.000
+    W11VAX6$3          3.844      0.563      6.826      0.000
+    W11VAX6$4         15.000      0.000    999.000    999.000
+    W11VAX7$1         -4.199      0.606     -6.926      0.000
+    W11VAX7$2         -4.198      0.630     -6.662      0.000
+    W11VAX7$3          3.979      1.517      2.622      0.009
+    W11VAX7$4          3.979      1.517      2.622      0.009
+    W11VAX8$1         -3.994      0.841     -4.748      0.000
+    W11VAX8$2         -2.521      0.639     -3.946      0.000
+    W11VAX8$3          4.048      0.967      4.188      0.000
+    W11VAX8$4          4.048      0.967      4.188      0.000
+    W11VAX9$1        -15.000      0.000    999.000    999.000
+    W11VAX9$2         -5.389      0.901     -5.979      0.000
+    W11VAX9$3          3.763      0.562      6.700      0.000
+    W11VAX9$4          6.175      1.709      3.613      0.000
+
+Latent Class 4
+
+ Thresholds
+    W11VAX4$1         -5.061      2.577     -1.964      0.049
+    W11VAX4$2         -3.625      0.782     -4.633      0.000
+    W11VAX4$3         -1.939      0.261     -7.419      0.000
+    W11VAX4$4          1.112      0.156      7.148      0.000
+    W11VAX5$1         -4.567      1.022     -4.466      0.000
+    W11VAX5$2         -2.523      0.246    -10.257      0.000
+    W11VAX5$3         -1.298      0.189     -6.858      0.000
+    W11VAX5$4          1.298      0.133      9.731      0.000
+    W11VAX6$1         -3.849      0.729     -5.278      0.000
+    W11VAX6$2         -0.910      0.156     -5.845      0.000
+    W11VAX6$3          0.608      0.125      4.855      0.000
+    W11VAX6$4          3.521      0.428      8.232      0.000
+    W11VAX7$1         -4.876      0.708     -6.884      0.000
+    W11VAX7$2         -2.768      0.261    -10.615      0.000
+    W11VAX7$3         -0.217      0.125     -1.738      0.082
+    W11VAX7$4          1.715      0.176      9.748      0.000
+    W11VAX8$1         -3.790      0.431     -8.795      0.000
+    W11VAX8$2         -1.557      0.177     -8.792      0.000
+    W11VAX8$3         -0.266      0.136     -1.955      0.051
+    W11VAX8$4          2.327      0.257      9.064      0.000
+    W11VAX9$1         -3.548      0.283    -12.548      0.000
+    W11VAX9$2         -1.730      0.111    -15.634      0.000
+    W11VAX9$3         -0.685      0.130     -5.251      0.000
+    W11VAX9$4          1.747      0.188      9.313      0.000
+
+Latent Class 5
+
+ Thresholds
+    W11VAX4$1         -2.559      0.618     -4.139      0.000
+    W11VAX4$2         -0.718      0.192     -3.732      0.000
+    W11VAX4$3          1.003      0.212      4.727      0.000
+    W11VAX4$4          3.386      0.464      7.303      0.000
+    W11VAX5$1         -2.478      0.390     -6.360      0.000
+    W11VAX5$2         -0.556      0.170     -3.267      0.001
+    W11VAX5$3          1.030      0.200      5.150      0.000
+    W11VAX5$4          2.737      0.470      5.821      0.000
+    W11VAX6$1         -1.319      0.218     -6.060      0.000
+    W11VAX6$2          1.379      0.253      5.455      0.000
+    W11VAX6$3          2.872      0.402      7.137      0.000
+    W11VAX6$4          3.692      0.546      6.768      0.000
+    W11VAX7$1         -3.358      0.446     -7.523      0.000
+    W11VAX7$2          0.022      0.223      0.099      0.921
+    W11VAX7$3          2.257      0.729      3.094      0.002
+    W11VAX7$4          4.285      1.082      3.960      0.000
+    W11VAX8$1         -0.994      0.198     -5.016      0.000
+    W11VAX8$2          1.222      0.294      4.157      0.000
+    W11VAX8$3          3.625      1.315      2.756      0.006
+    W11VAX8$4          4.097      1.672      2.450      0.014
+    W11VAX9$1         -3.090      0.423     -7.305      0.000
+    W11VAX9$2         -0.610      0.175     -3.486      0.000
+    W11VAX9$3          1.350      0.279      4.833      0.000
+    W11VAX9$4          5.173      0.898      5.761      0.000
+
+Categorical Latent Variables
+
+ Means
+    C#1                0.620      0.144      4.305      0.000
+    C#2               -0.997      0.233     -4.272      0.000
+    C#3               -0.870      0.180     -4.821      0.000
+    C#4                0.513      0.214      2.399      0.016
+
+
+RESULTS IN PROBABILITY SCALE
+
+Latent Class 1
+
+ W11VAX4
+    Category 1         0.005      0.002      2.080      0.037
+    Category 2         0.007      0.003      2.171      0.030
+    Category 3         0.009      0.004      2.379      0.017
+    Category 4         0.092      0.012      7.379      0.000
+    Category 5         0.888      0.014     63.892      0.000
+ W11VAX5
+    Category 1         0.032      0.008      3.869      0.000
+    Category 2         0.029      0.006      4.592      0.000
+    Category 3         0.040      0.008      4.773      0.000
+    Category 4         0.178      0.015     11.835      0.000
+    Category 5         0.721      0.018     39.936      0.000
+ W11VAX6
+    Category 1         0.028      0.009      3.120      0.002
+    Category 2         0.049      0.009      5.571      0.000
+    Category 3         0.116      0.012      9.674      0.000
+    Category 4         0.298      0.017     17.589      0.000
+    Category 5         0.510      0.022     23.584      0.000
+ W11VAX7
+    Category 1         0.005      0.003      1.647      0.100
+    Category 2         0.005      0.003      1.745      0.081
+    Category 3         0.069      0.012      5.667      0.000
+    Category 4         0.135      0.014      9.902      0.000
+    Category 5         0.786      0.019     42.314      0.000
+ W11VAX8
+    Category 1         0.028      0.007      4.256      0.000
+    Category 2         0.034      0.007      4.773      0.000
+    Category 3         0.049      0.009      5.207      0.000
+    Category 4         0.219      0.018     12.308      0.000
+    Category 5         0.669      0.021     31.359      0.000
+ W11VAX9
+    Category 1         0.150      0.012     12.366      0.000
+    Category 2         0.034      0.006      5.314      0.000
+    Category 3         0.013      0.006      1.992      0.046
+    Category 4         0.039      0.010      3.995      0.000
+    Category 5         0.764      0.018     42.046      0.000
+
+Latent Class 2
+
+ W11VAX4
+    Category 1         0.402      0.055      7.269      0.000
+    Category 2         0.217      0.049      4.467      0.000
+    Category 3         0.128      0.029      4.458      0.000
+    Category 4         0.053      0.029      1.806      0.071
+    Category 5         0.200      0.059      3.379      0.001
+ W11VAX5
+    Category 1         0.336      0.048      7.033      0.000
+    Category 2         0.102      0.027      3.747      0.000
+    Category 3         0.224      0.043      5.251      0.000
+    Category 4         0.084      0.032      2.590      0.010
+    Category 5         0.254      0.059      4.277      0.000
+ W11VAX6
+    Category 1         0.836      0.048     17.304      0.000
+    Category 2         0.062      0.033      1.865      0.062
+    Category 3         0.070      0.040      1.753      0.080
+    Category 4         0.000      0.000      0.000      1.000
+    Category 5         0.033      0.022      1.517      0.129
+ W11VAX7
+    Category 1         0.724      0.068     10.715      0.000
+    Category 2         0.140      0.051      2.741      0.006
+    Category 3         0.099      0.035      2.812      0.005
+    Category 4         0.004      0.014      0.252      0.801
+    Category 5         0.034      0.029      1.146      0.252
+ W11VAX8
+    Category 1         0.833      0.056     14.758      0.000
+    Category 2         0.084      0.036      2.329      0.020
+    Category 3         0.029      0.020      1.480      0.139
+    Category 4         0.019      0.011      1.620      0.105
+    Category 5         0.035      0.034      1.024      0.306
+ W11VAX9
+    Category 1         0.532      0.061      8.758      0.000
+    Category 2         0.191      0.049      3.887      0.000
+    Category 3         0.100      0.029      3.415      0.001
+    Category 4         0.028      0.031      0.911      0.362
+    Category 5         0.149      0.037      4.077      0.000
+
+Latent Class 3
+
+ W11VAX4
+    Category 1         0.000      0.000      0.000      1.000
+    Category 2         0.003      0.005      0.576      0.564
+    Category 3         0.954      0.022     44.214      0.000
+    Category 4         0.021      0.014      1.509      0.131
+    Category 5         0.022      0.016      1.411      0.158
+ W11VAX5
+    Category 1         0.011      0.019      0.541      0.588
+    Category 2         0.011      0.010      1.158      0.247
+    Category 3         0.944      0.030     31.796      0.000
+    Category 4         0.032      0.020      1.628      0.103
+    Category 5         0.002      0.003      0.699      0.485
+ W11VAX6
+    Category 1         0.015      0.014      1.137      0.255
+    Category 2         0.025      0.017      1.515      0.130
+    Category 3         0.938      0.026     35.738      0.000
+    Category 4         0.021      0.012      1.814      0.070
+    Category 5         0.000      0.000      0.000      1.000
+ W11VAX7
+    Category 1         0.015      0.009      1.674      0.094
+    Category 2         0.000      0.002      0.004      0.997
+    Category 3         0.967      0.029     33.696      0.000
+    Category 4         0.000      0.000      0.000      1.000
+    Category 5         0.018      0.027      0.671      0.502
+ W11VAX8
+    Category 1         0.018      0.015      1.211      0.226
+    Category 2         0.056      0.041      1.384      0.166
+    Category 3         0.908      0.046     19.884      0.000
+    Category 4         0.000      0.000      0.000      1.000
+    Category 5         0.017      0.016      1.053      0.292
+ W11VAX9
+    Category 1         0.000      0.000      0.000      1.000
+    Category 2         0.005      0.004      1.115      0.265
+    Category 3         0.973      0.013     73.470      0.000
+    Category 4         0.021      0.012      1.739      0.082
+    Category 5         0.002      0.004      0.586      0.558
+
+Latent Class 4
+
+ W11VAX4
+    Category 1         0.006      0.016      0.391      0.696
+    Category 2         0.020      0.006      3.122      0.002
+    Category 3         0.100      0.016      6.309      0.000
+    Category 4         0.627      0.032     19.299      0.000
+    Category 5         0.247      0.029      8.541      0.000
+ W11VAX5
+    Category 1         0.010      0.010      0.988      0.323
+    Category 2         0.064      0.012      5.164      0.000
+    Category 3         0.140      0.022      6.337      0.000
+    Category 4         0.571      0.035     16.411      0.000
+    Category 5         0.214      0.022      9.541      0.000
+ W11VAX6
+    Category 1         0.021      0.015      1.400      0.161
+    Category 2         0.266      0.025     10.703      0.000
+    Category 3         0.361      0.022     16.474      0.000
+    Category 4         0.324      0.029     11.058      0.000
+    Category 5         0.029      0.012      2.407      0.016
+ W11VAX7
+    Category 1         0.008      0.005      1.422      0.155
+    Category 2         0.052      0.012      4.167      0.000
+    Category 3         0.387      0.027     14.082      0.000
+    Category 4         0.402      0.025     16.184      0.000
+    Category 5         0.153      0.023      6.707      0.000
+ W11VAX8
+    Category 1         0.022      0.009      2.373      0.018
+    Category 2         0.152      0.022      6.917      0.000
+    Category 3         0.260      0.021     12.358      0.000
+    Category 4         0.477      0.039     12.184      0.000
+    Category 5         0.089      0.021      4.276      0.000
+ W11VAX9
+    Category 1         0.028      0.008      3.639      0.000
+    Category 2         0.123      0.013      9.702      0.000
+    Category 3         0.185      0.027      6.753      0.000
+    Category 4         0.516      0.025     20.922      0.000
+    Category 5         0.148      0.024      6.261      0.000
+
+Latent Class 5
+
+ W11VAX4
+    Category 1         0.072      0.041      1.742      0.081
+    Category 2         0.256      0.038      6.798      0.000
+    Category 3         0.404      0.043      9.459      0.000
+    Category 4         0.236      0.038      6.226      0.000
+    Category 5         0.033      0.015      2.230      0.026
+ W11VAX5
+    Category 1         0.077      0.028      2.782      0.005
+    Category 2         0.287      0.038      7.633      0.000
+    Category 3         0.372      0.030     12.340      0.000
+    Category 4         0.202      0.031      6.563      0.000
+    Category 5         0.061      0.027      2.265      0.024
+ W11VAX6
+    Category 1         0.211      0.036      5.823      0.000
+    Category 2         0.588      0.045     13.092      0.000
+    Category 3         0.148      0.030      4.887      0.000
+    Category 4         0.029      0.014      2.073      0.038
+    Category 5         0.024      0.013      1.879      0.060
+ W11VAX7
+    Category 1         0.034      0.015      2.318      0.020
+    Category 2         0.472      0.056      8.487      0.000
+    Category 3         0.400      0.046      8.670      0.000
+    Category 4         0.081      0.054      1.508      0.132
+    Category 5         0.014      0.014      0.937      0.349
+ W11VAX8
+    Category 1         0.270      0.039      6.915      0.000
+    Category 2         0.502      0.038     13.263      0.000
+    Category 3         0.202      0.034      5.924      0.000
+    Category 4         0.010      0.010      0.925      0.355
+    Category 5         0.016      0.027      0.608      0.543
+ W11VAX9
+    Category 1         0.044      0.018      2.471      0.013
+    Category 2         0.309      0.035      8.773      0.000
+    Category 3         0.442      0.038     11.501      0.000
+    Category 4         0.200      0.044      4.552      0.000
+    Category 5         0.006      0.005      1.120      0.263
+
+
+LATENT CLASS ODDS RATIO RESULTS
+
+                                         (Est. - 1) Two-Tailed
+                    Estimate       S.E.     / S.E.    P-Value
+
+Latent Class 1 Compared to Latent Class 2
+
+ W11VAX4
+    Category > 1     147.412     78.549      1.864      0.062
+    Category > 2     142.998     59.580      2.383      0.017
+    Category > 3     146.334     61.130      2.377      0.017
+    Category > 4      31.712     12.645      2.429      0.015
+ W11VAX5
+    Category > 1      15.172      5.199      2.726      0.006
+    Category > 2      12.013      3.249      3.390      0.001
+    Category > 3      17.438      5.175      3.177      0.001
+    Category > 4       7.573      2.503      2.626      0.009
+ W11VAX6
+    Category > 1     175.577     76.164      2.292      0.022
+    Category > 2     105.045     52.055      1.999      0.046
+    Category > 3     124.296     85.922      1.435      0.151
+    Category > 4      30.823     21.216      1.406      0.160
+ W11VAX7
+    Category > 1     487.511    334.079      1.456      0.145
+    Category > 2     617.290    332.395      1.854      0.064
+    Category > 3     301.199    256.793      1.169      0.242
+    Category > 4     105.387     95.271      1.096      0.273
+ W11VAX8
+    Category > 1     173.609     79.733      2.165      0.030
+    Category > 2     167.980     96.395      1.732      0.083
+    Category > 3     140.428     98.964      1.409      0.159
+    Category > 4      55.432     56.230      0.968      0.333
+ W11VAX9
+    Category > 1       6.450      1.691      3.222      0.001
+    Category > 2      11.536      2.892      3.643      0.000
+    Category > 3      18.876      5.041      3.546      0.000
+    Category > 4      18.396      5.779      3.010      0.003
+
+Latent Class 1 Compared to Latent Class 3
+
+ W11VAX4
+    Category > 1       0.000      0.000    999.000    999.000
+    Category > 2       0.245      0.435     -1.734      0.083
+    Category > 3    1105.061    637.535      1.732      0.083
+    Category > 4     346.371    256.247      1.348      0.178
+ W11VAX5
+    Category > 1       0.318      0.602     -1.133      0.257
+    Category > 2       0.340      0.357     -1.848      0.065
+    Category > 3     249.047    155.273      1.597      0.110
+    Category > 4    1261.962   1811.219      0.696      0.486
+ W11VAX6
+    Category > 1       0.543      0.524     -0.872      0.383
+    Category > 2       0.512      0.314     -1.555      0.120
+    Category > 3     196.134    112.940      1.728      0.084
+    Category > 4   *********      0.000    999.000    999.000
+ W11VAX7
+    Category > 1       2.797      2.403      0.748      0.455
+    Category > 2       1.459      1.125      0.408      0.683
+    Category > 3     622.427    950.047      0.654      0.513
+    Category > 4     195.979    298.029      0.654      0.513
+ W11VAX8
+    Category > 1       0.640      0.560     -0.643      0.520
+    Category > 2       1.217      0.803      0.271      0.787
+    Category > 3     456.936    446.495      1.021      0.307
+    Category > 4     115.945    112.636      1.020      0.307
+ W11VAX9
+    Category > 1       0.000      0.000    999.000    999.000
+    Category > 2       0.020      0.018    -53.549      0.000
+    Category > 3     175.355     99.748      1.748      0.080
+    Category > 4    1553.746   2663.438      0.583      0.560
+
+Latent Class 1 Compared to Latent Class 4
+
+ W11VAX4
+    Category > 1       1.390      3.731      0.104      0.917
+    Category > 2       2.343      2.102      0.639      0.523
+    Category > 3       7.133      2.903      2.113      0.035
+    Category > 4      24.127      4.527      5.109      0.000
+ W11VAX5
+    Category > 1       0.311      0.350     -1.967      0.049
+    Category > 2       1.235      0.410      0.573      0.567
+    Category > 3       2.428      0.637      2.241      0.025
+    Category > 4       9.446      1.463      5.772      0.000
+ W11VAX6
+    Category > 1       0.736      0.671     -0.394      0.694
+    Category > 2       4.837      1.331      2.882      0.004
+    Category > 3       7.712      1.406      4.773      0.000
+    Category > 4      35.214     15.116      2.264      0.024
+ W11VAX7
+    Category > 1       1.420      1.386      0.303      0.762
+    Category > 2       6.097      3.361      1.516      0.129
+    Category > 3       9.371      2.168      3.861      0.000
+    Category > 4      20.375      3.849      5.034      0.000
+ W11VAX8
+    Category > 1       0.785      0.409     -0.526      0.599
+    Category > 2       3.190      0.812      2.695      0.007
+    Category > 3       6.115      1.233      4.147      0.000
+    Category > 4      20.728      5.351      3.687      0.000
+ W11VAX9
+    Category > 1       0.163      0.049    -16.985      0.000
+    Category > 2       0.784      0.117     -1.850      0.064
+    Category > 3       2.053      0.366      2.874      0.004
+    Category > 4      18.537      3.911      4.484      0.000
+
+Latent Class 1 Compared to Latent Class 5
+
+ W11VAX4
+    Category > 1      16.963     12.642      1.263      0.207
+    Category > 2      42.862     16.596      2.522      0.012
+    Category > 3     135.196     46.994      2.856      0.004
+    Category > 4     234.489    115.060      2.029      0.042
+ W11VAX5
+    Category > 1       2.513      1.121      1.350      0.177
+    Category > 2       8.830      2.222      3.523      0.000
+    Category > 3      24.901      6.316      3.784      0.000
+    Category > 4      39.808     19.041      2.038      0.042
+ W11VAX6
+    Category > 1       9.237      3.563      2.312      0.021
+    Category > 2      47.737     15.904      2.939      0.003
+    Category > 3      74.219     31.888      2.296      0.022
+    Category > 4      41.786     23.107      1.765      0.078
+ W11VAX7
+    Category > 1       6.481      4.972      1.103      0.270
+    Category > 2      99.293     51.616      1.904      0.057
+    Category > 3     111.213     88.902      1.240      0.215
+    Category > 4     266.324    293.242      0.905      0.366
+ W11VAX8
+    Category > 1      12.860      4.151      2.857      0.004
+    Category > 2      51.378     17.771      2.835      0.005
+    Category > 3     299.324    403.059      0.740      0.459
+    Category > 4     121.716    204.042      0.592      0.554
+ W11VAX9
+    Category > 1       0.258      0.112     -6.598      0.000
+    Category > 2       2.403      0.476      2.947      0.003
+    Category > 3      15.702      4.917      2.990      0.003
+    Category > 4     570.132    520.357      1.094      0.274
+
+Latent Class 2 Compared to Latent Class 3
+
+ W11VAX4
+    Category > 1       0.000      0.000    999.000    999.000
+    Category > 2       0.002      0.003   -330.304      0.000
+    Category > 3       7.552      4.506      1.454      0.146
+    Category > 4      10.922      8.940      1.110      0.267
+ W11VAX5
+    Category > 1       0.021      0.039    -24.868      0.000
+    Category > 2       0.028      0.030    -32.755      0.000
+    Category > 3      14.282      9.367      1.418      0.156
+    Category > 4     166.629    245.408      0.675      0.500
+ W11VAX6
+    Category > 1       0.003      0.003   -334.744      0.000
+    Category > 2       0.005      0.004   -261.787      0.000
+    Category > 3       1.578      1.389      0.416      0.677
+    Category > 4   *********      0.000    999.000    999.000
+ W11VAX7
+    Category > 1       0.006      0.004   -245.161      0.000
+    Category > 2       0.002      0.002   -560.498      0.000
+    Category > 3       2.067      3.585      0.297      0.766
+    Category > 4       1.860      3.239      0.265      0.791
+ W11VAX8
+    Category > 1       0.004      0.003   -294.192      0.000
+    Category > 2       0.007      0.006   -161.300      0.000
+    Category > 3       3.254      3.905      0.577      0.564
+    Category > 4       2.092      2.938      0.372      0.710
+ W11VAX9
+    Category > 1       0.000      0.000    999.000    999.000
+    Category > 2       0.002      0.002   -621.710      0.000
+    Category > 3       9.290      5.713      1.451      0.147
+    Category > 4      84.461    146.172      0.571      0.568
+
+Latent Class 2 Compared to Latent Class 4
+
+ W11VAX4
+    Category > 1       0.009      0.025    -40.298      0.000
+    Category > 2       0.016      0.014    -72.800      0.000
+    Category > 3       0.049      0.021    -45.791      0.000
+    Category > 4       0.761      0.308     -0.776      0.438
+ W11VAX5
+    Category > 1       0.021      0.022    -44.897      0.000
+    Category > 2       0.103      0.033    -27.301      0.000
+    Category > 3       0.139      0.045    -19.080      0.000
+    Category > 4       1.247      0.425      0.582      0.560
+ W11VAX6
+    Category > 1       0.004      0.004   -271.262      0.000
+    Category > 2       0.046      0.024    -39.435      0.000
+    Category > 3       0.062      0.043    -21.757      0.000
+    Category > 4       1.142      0.921      0.155      0.877
+ W11VAX7
+    Category > 1       0.003      0.002   -431.558      0.000
+    Category > 2       0.010      0.005   -201.043      0.000
+    Category > 3       0.031      0.027    -35.310      0.000
+    Category > 4       0.193      0.178     -4.526      0.000
+ W11VAX8
+    Category > 1       0.005      0.003   -351.375      0.000
+    Category > 2       0.019      0.012    -83.239      0.000
+    Category > 3       0.044      0.032    -29.769      0.000
+    Category > 4       0.374      0.367     -1.705      0.088
+ W11VAX9
+    Category > 1       0.025      0.010   -100.312      0.000
+    Category > 2       0.068      0.017    -53.375      0.000
+    Category > 3       0.109      0.032    -28.155      0.000
+    Category > 4       1.008      0.348      0.022      0.982
+
+Latent Class 2 Compared to Latent Class 5
+
+ W11VAX4
+    Category > 1       0.115      0.073    -12.093      0.000
+    Category > 2       0.300      0.102     -6.898      0.000
+    Category > 3       0.924      0.391     -0.195      0.846
+    Category > 4       7.394      4.806      1.330      0.183
+ W11VAX5
+    Category > 1       0.166      0.073    -11.458      0.000
+    Category > 2       0.735      0.210     -1.262      0.207
+    Category > 3       1.428      0.516      0.829      0.407
+    Category > 4       5.256      3.155      1.349      0.177
+ W11VAX6
+    Category > 1       0.053      0.021    -45.141      0.000
+    Category > 2       0.454      0.266     -2.049      0.040
+    Category > 3       0.597      0.487     -0.827      0.408
+    Category > 4       1.356      1.231      0.289      0.773
+ W11VAX7
+    Category > 1       0.013      0.006   -167.268      0.000
+    Category > 2       0.161      0.080    -10.455      0.000
+    Category > 3       0.369      0.480     -1.314      0.189
+    Category > 4       2.527      3.795      0.402      0.687
+ W11VAX8
+    Category > 1       0.074      0.034    -27.601      0.000
+    Category > 2       0.306      0.215     -3.231      0.001
+    Category > 3       2.132      3.604      0.314      0.754
+    Category > 4       2.196      5.017      0.238      0.812
+ W11VAX9
+    Category > 1       0.040      0.018    -52.693      0.000
+    Category > 2       0.208      0.065    -12.156      0.000
+    Category > 3       0.832      0.347     -0.485      0.628
+    Category > 4      30.992     29.555      1.015      0.310
+
+Latent Class 3 Compared to Latent Class 4
+
+ W11VAX4
+    Category > 1   20717.738      0.000    999.000    999.000
+    Category > 2       9.552     18.113      0.472      0.637
+    Category > 3       0.006      0.004   -280.579      0.000
+    Category > 4       0.070      0.052    -17.925      0.000
+ W11VAX5
+    Category > 1       0.979      1.967     -0.011      0.991
+    Category > 2       3.628      3.766      0.698      0.485
+    Category > 3       0.010      0.006   -161.994      0.000
+    Category > 4       0.007      0.011    -92.072      0.000
+ W11VAX6
+    Category > 1       1.354      1.480      0.239      0.811
+    Category > 2       9.444      5.630      1.500      0.134
+    Category > 3       0.039      0.023    -42.363      0.000
+    Category > 4       0.000      0.000    999.000    999.000
+ W11VAX7
+    Category > 1       0.508      0.475     -1.036      0.300
+    Category > 2       4.178      2.820      1.127      0.260
+    Category > 3       0.015      0.023    -42.840      0.000
+    Category > 4       0.104      0.161     -5.576      0.000
+ W11VAX8
+    Category > 1       1.226      1.162      0.195      0.846
+    Category > 2       2.620      1.730      0.937      0.349
+    Category > 3       0.013      0.013    -75.629      0.000
+    Category > 4       0.179      0.181     -4.539      0.000
+ W11VAX9
+    Category > 1   94125.117      0.000    999.000    999.000
+    Category > 2      38.834     35.251      1.073      0.283
+    Category > 3       0.012      0.007   -146.293      0.000
+    Category > 4       0.012      0.021    -48.031      0.000
+
+Latent Class 3 Compared to Latent Class 5
+
+ W11VAX4
+    Category > 1   *********      0.000    999.000    999.000
+    Category > 2     174.737    301.642      0.576      0.565
+    Category > 3       0.122      0.067    -13.096      0.000
+    Category > 4       0.677      0.582     -0.555      0.579
+ W11VAX5
+    Category > 1       7.904     15.779      0.438      0.662
+    Category > 2      25.942     27.098      0.920      0.357
+    Category > 3       0.100      0.064    -14.061      0.000
+    Category > 4       0.032      0.049    -19.848      0.000
+ W11VAX6
+    Category > 1      16.997     15.924      1.005      0.315
+    Category > 2      93.198     55.677      1.656      0.098
+    Category > 3       0.378      0.264     -2.352      0.019
+    Category > 4       0.000      0.000    999.000    999.000
+ W11VAX7
+    Category > 1       2.317      1.854      0.711      0.477
+    Category > 2      68.039     44.184      1.517      0.129
+    Category > 3       0.179      0.310     -2.648      0.008
+    Category > 4       1.359      2.806      0.128      0.898
+ W11VAX8
+    Category > 1      20.097     17.433      1.095      0.273
+    Category > 2      42.202     28.353      1.453      0.146
+    Category > 3       0.655      1.064     -0.324      0.746
+    Category > 4       1.050      2.023      0.025      0.980
+ W11VAX9
+    Category > 1   *********      0.000    999.000    999.000
+    Category > 2     119.001    107.915      1.093      0.274
+    Category > 3       0.090      0.057    -16.085      0.000
+    Category > 4       0.367      0.712     -0.889      0.374
+
+Latent Class 4 Compared to Latent Class 5
+
+ W11VAX4
+    Category > 1      12.207     38.101      0.294      0.769
+    Category > 2      18.292     15.654      1.105      0.269
+    Category > 3      18.955      4.914      3.654      0.000
+    Category > 4       9.719      4.868      1.791      0.073
+ W11VAX5
+    Category > 1       8.074     10.252      0.690      0.490
+    Category > 2       7.152      2.082      2.955      0.003
+    Category > 3      10.254      2.346      3.945      0.000
+    Category > 4       4.214      2.184      1.472      0.141
+ W11VAX6
+    Category > 1      12.557     10.023      1.153      0.249
+    Category > 2       9.868      2.365      3.750      0.000
+    Category > 3       9.624      3.832      2.251      0.024
+    Category > 4       1.187      0.929      0.201      0.841
+ W11VAX7
+    Category > 1       4.563      4.058      0.878      0.380
+    Category > 2      16.286      4.431      3.450      0.001
+    Category > 3      11.867      8.741      1.243      0.214
+    Category > 4      13.071     14.191      0.851      0.395
+ W11VAX8
+    Category > 1      16.387      7.538      2.041      0.041
+    Category > 2      16.107      4.091      3.693      0.000
+    Category > 3      48.952     61.427      0.781      0.435
+    Category > 4       5.872     10.789      0.452      0.652
+ W11VAX9
+    Category > 1       1.580      0.861      0.674      0.500
+    Category > 2       3.064      0.648      3.184      0.001
+    Category > 3       7.649      1.994      3.334      0.001
+    Category > 4      30.757     27.814      1.070      0.285
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.331E-04
+       (ratio of smallest to largest eigenvalue)
+
+
+DIAGRAM INFORMATION
+
+  Mplus diagrams are currently not available for Mixture analysis.
+  No diagram output was produced.
+
+
+     Beginning Time:  23:34:41
+        Ending Time:  23:34:45
+       Elapsed Time:  00:00:04
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2019 Muthen & Muthen

@@ -1,0 +1,1105 @@
+Mplus VERSION 8.4
+MUTHEN & MUTHEN
+11/18/2020  11:16 PM
+
+INPUT INSTRUCTIONS
+
+  Title:
+    Stata2Mplus conversion for C:\Users\pkb16122\Dropbox\Grants and Applications\VaccineUKRI
+    List of variables converted shown below
+
+    id : New Panel ID
+    W8wave6 :
+    w6vax1 : Getting vaccines is a good way to protect children from disease.
+
+    w6vax2 : Generally I do what my doctor recommends about vaccines.
+
+    w6vax3 : New vaccines are recommended only if they are safe.
+
+    w6vax4 : Children do not need vaccines for diseases that are not common anymore.
+
+    w6vax5 : Enough children are vaccinated that even unvaccinated children are safe from di
+
+    w6vax6 : I am concerned about serious side effects of vaccines.
+
+    w6vax7 : Some vaccines cause autism in healthy children.
+
+    w6vax8 : Parents should have the right to refuse vaccines required for schools for any r
+
+    w6vax9 : The risks vaccinations pose to children outweigh their health benefits.
+
+
+    w6vax10 : Vaccinations are one of the most significant achievements in improving public
+
+
+  Data:
+  File is w6vaxitems.dat;
+  Variable:
+    Names are
+       id W8wave6 w6vax1 w6vax2 w6vax3 w6vax4 w6vax5 w6vax6 w6vax7 w6vax8
+       w6vax9 w6vax10;
+    Usevariables are w6vax4-w6vax9;
+    Categorical are w6vax4-w6vax9;
+    Missing are all (-9999) ;
+    idvariable is id;
+    weight is W8wave6;
+   classes are c(5);
+  Analysis:
+    Estimator is MLR;
+    Type is Mixture;
+  Model:
+
+
+  Output:
+
+
+
+
+*** WARNING
+  Input line exceeded 90 characters. Some input may be truncated.
+    Stata2Mplus conversion for C:\Users\pkb16122\Dropbox\Grants and Applications\VaccineUKRI_
+*** WARNING
+  Input line exceeded 90 characters. Some input may be truncated.
+    w6vax5 : Enough children are vaccinated that even unvaccinated children are safe from dis
+*** WARNING
+  Input line exceeded 90 characters. Some input may be truncated.
+    w6vax8 : Parents should have the right to refuse vaccines required for schools for any re
+*** WARNING
+  Input line exceeded 90 characters. Some input may be truncated.
+    w6vax10 : Vaccinations are one of the most significant achievements in improving public h
+*** WARNING
+  Data set contains cases with missing on all variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on all variables:  110
+   5 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+
+Stata2Mplus conversion for C:\Users\pkb16122\Dropbox\Grants and Applications\VaccineUKRI
+List of variables converted shown below
+
+id : New Panel ID
+W8wave6 :
+w6vax1 : Getting vaccines is a good way to protect children from disease.
+
+w6vax2 : Generally I do what my doctor recommends about vaccines.
+
+w6vax3 : New vaccines are recommended only if they are safe.
+
+w6vax4 : Children do not need vaccines for diseases that are not common anymore.
+
+w6vax5 : Enough children are vaccinated that even unvaccinated children are safe from di
+
+w6vax6 : I am concerned about serious side effects of vaccines.
+
+w6vax7 : Some vaccines cause autism in healthy children.
+
+w6vax8 : Parents should have the right to refuse vaccines required for schools for any r
+
+w6vax9 : The risks vaccinations pose to children outweigh their health benefits.
+
+
+w6vax10 : Vaccinations are one of the most significant achievements in improving public
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                        3917
+
+Number of dependent variables                                    6
+Number of independent variables                                  0
+Number of continuous latent variables                            0
+Number of categorical latent variables                           1
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   W6VAX4      W6VAX5      W6VAX6      W6VAX7      W6VAX8      W6VAX9
+
+Categorical latent variables
+   C
+
+Variables with special functions
+
+  Weight variable       W8WAVE6
+  ID variable           ID
+
+Estimator                                                      MLR
+Information matrix                                        OBSERVED
+Optimization Specifications for the Quasi-Newton Algorithm for
+Continuous Outcomes
+  Maximum number of iterations                                 100
+  Convergence criterion                                  0.100D-05
+Optimization Specifications for the EM Algorithm
+  Maximum number of iterations                                 500
+  Convergence criteria
+    Loglikelihood change                                 0.100D-06
+    Relative loglikelihood change                        0.100D-06
+    Derivative                                           0.100D-05
+Optimization Specifications for the M step of the EM Algorithm for
+Categorical Latent variables
+  Number of M step iterations                                    1
+  M step convergence criterion                           0.100D-05
+  Basis for M step termination                           ITERATION
+Optimization Specifications for the M step of the EM Algorithm for
+Censored, Binary or Ordered Categorical (Ordinal), Unordered
+Categorical (Nominal) and Count Outcomes
+  Number of M step iterations                                    1
+  M step convergence criterion                           0.100D-05
+  Basis for M step termination                           ITERATION
+  Maximum value for logit thresholds                            15
+  Minimum value for logit thresholds                           -15
+  Minimum expected cell size for chi-square              0.100D-01
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Optimization algorithm                                         EMA
+Random Starts Specifications
+  Number of initial stage random starts                         20
+  Number of final stage optimizations                            4
+  Number of initial stage iterations                            10
+  Initial stage convergence criterion                    0.100D+01
+  Random starts scale                                    0.500D+01
+  Random seed for generating random starts                       0
+Link                                                         LOGIT
+
+Input data file(s)
+  w6vaxitems.dat
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns            53
+     Number of y missing data patterns           0
+     Number of u missing data patterns          53
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT FOR U
+
+
+           Covariance Coverage
+              W6VAX4        W6VAX5        W6VAX6        W6VAX7        W6VAX8
+              ________      ________      ________      ________      ________
+ W6VAX4         0.950
+ W6VAX5         0.896         0.920
+ W6VAX6         0.936         0.905         0.977
+ W6VAX7         0.726         0.713         0.737         0.742
+ W6VAX8         0.915         0.886         0.934         0.721         0.951
+ W6VAX9         0.919         0.890         0.934         0.729         0.912
+
+
+           Covariance Coverage
+              W6VAX9
+              ________
+ W6VAX9         0.948
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+    W6VAX4
+      Category 1    0.019           68.878
+      Category 2    0.070          259.475
+      Category 3    0.168          624.002
+      Category 4    0.433         1609.482
+      Category 5    0.311         1157.570
+    W6VAX5
+      Category 1    0.029          104.507
+      Category 2    0.090          324.821
+      Category 3    0.208          746.795
+      Category 4    0.406         1459.011
+      Category 5    0.268          962.653
+    W6VAX6
+      Category 1    0.058          221.752
+      Category 2    0.207          793.750
+      Category 3    0.343         1313.375
+      Category 4    0.269         1030.235
+      Category 5    0.122          468.611
+    W6VAX7
+      Category 1    0.036          105.083
+      Category 2    0.118          342.434
+      Category 3    0.321          932.970
+      Category 4    0.257          746.648
+      Category 5    0.269          782.174
+    W6VAX8
+      Category 1    0.082          305.407
+      Category 2    0.270         1007.405
+      Category 3    0.271         1007.519
+      Category 4    0.259          964.569
+      Category 5    0.118          439.746
+    W6VAX9
+      Category 1    0.096          353.652
+      Category 2    0.164          607.021
+      Category 3    0.162          601.065
+      Category 4    0.280         1037.943
+      Category 5    0.298         1101.408
+
+
+RANDOM STARTS RESULTS RANKED FROM THE BEST TO THE WORST LOGLIKELIHOOD VALUES
+
+Final stage loglikelihood values at local maxima, seeds, and initial stage start numbers:
+
+          -26641.655  93468            3
+          -26641.655  unperturbed      0
+          -26641.655  903420           5
+          -26750.347  285380           1
+
+
+
+THE BEST LOGLIKELIHOOD VALUE HAS BEEN REPLICATED.  RERUN WITH AT LEAST TWICE THE
+RANDOM STARTS TO CHECK THAT THE BEST LOGLIKELIHOOD IS STILL OBTAINED AND REPLICATED.
+
+     IN THE OPTIMIZATION, ONE OR MORE LOGIT THRESHOLDS APPROACHED EXTREME VALUES
+     OF -15.000 AND 15.000 AND WERE FIXED TO STABILIZE MODEL ESTIMATION.  THESE
+     VALUES IMPLY PROBABILITIES OF 0 AND 1.  IN THE MODEL RESULTS SECTION, THESE
+     PARAMETERS HAVE 0 STANDARD ERRORS AND 999 IN THE Z-SCORE AND P-VALUE COLUMNS.
+
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                      124
+
+Loglikelihood
+
+          H0 Value                      -26641.655
+          H0 Scaling Correction Factor      1.3352
+            for MLR
+
+Information Criteria
+
+          Akaike (AIC)                   53531.310
+          Bayesian (BIC)                 54309.172
+          Sample-Size Adjusted BIC       53915.156
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit for the Binary and Ordered Categorical
+(Ordinal) Outcomes**
+
+          Pearson Chi-Square
+
+          Value                          12080.740
+          Degrees of Freedom                 15411
+          P-Value                           1.0000
+
+          Likelihood Ratio Chi-Square
+
+          Value                           5229.628
+          Degrees of Freedom                 15411
+          P-Value                           1.0000
+
+** Of the 45305 cells in the latent class indicator table, 89
+   were deleted in the calculation of chi-square due to extreme values.
+
+Chi-Square Test for MCAR under the Unrestricted Latent Class Indicator Model
+
+          Pearson Chi-Square
+
+          Value                           9068.149
+          Degrees of Freedom                 29628
+          P-Value                           1.0000
+
+          Likelihood Ratio Chi-Square
+
+          Value                           5159.719
+          Degrees of Freedom                 29628
+          P-Value                           1.0000
+
+
+
+FINAL CLASS COUNTS AND PROPORTIONS FOR THE LATENT CLASSES
+BASED ON THE ESTIMATED MODEL
+
+    Latent
+   Classes
+
+       1       1511.67695          0.38593
+       2        129.67872          0.03311
+       3       1246.54422          0.31824
+       4        746.12413          0.19048
+       5        282.97598          0.07224
+
+
+FINAL CLASS COUNTS AND PROPORTIONS FOR THE LATENT CLASSES
+BASED ON ESTIMATED POSTERIOR PROBABILITIES
+
+    Latent
+   Classes
+
+       1       1511.67695          0.38593
+       2        129.67872          0.03311
+       3       1246.54422          0.31824
+       4        746.12413          0.19048
+       5        282.97598          0.07224
+
+
+FINAL CLASS COUNTS AND PROPORTIONS FOR THE LATENT CLASSES
+BASED ON THEIR MOST LIKELY LATENT CLASS MEMBERSHIP
+
+Class Counts and Proportions
+
+    Latent
+   Classes
+
+       1             1576          0.40229
+       2              127          0.03249
+       3             1240          0.31661
+       4              708          0.18068
+       5              266          0.06793
+
+
+CLASSIFICATION QUALITY
+
+     Entropy                         0.799
+
+
+Classification Probabilities for the Most Likely Latent Class Membership (Column)
+by Latent Class (Row)
+
+           1        2        3        4        5
+
+    1   0.881    0.000    0.061    0.051    0.007
+    2   0.002    0.884    0.010    0.104    0.001
+    3   0.081    0.001    0.909    0.009    0.001
+    4   0.166    0.015    0.018    0.782    0.019
+    5   0.067    0.000    0.000    0.081    0.852
+
+
+Logits for the Classification Probabilities for the Most Likely Latent Class Membership (Column)
+by Latent Class (Row)
+
+              1        2        3        4        5
+
+    1      4.852   -3.693    2.188    2.002    0.000
+    2      0.738    7.027    2.500    4.882    0.000
+    3      5.045    0.538    7.459    2.794    0.000
+    4      2.186   -0.224   -0.047    3.735    0.000
+    5     -2.548   -8.486   -8.743   -2.347    0.000
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Latent Class 1
+
+ Thresholds
+    W6VAX4$1          -6.763      1.301     -5.199      0.000
+    W6VAX4$2          -3.370      0.231    -14.564      0.000
+    W6VAX4$3          -1.760      0.116    -15.229      0.000
+    W6VAX4$4           1.854      0.158     11.708      0.000
+    W6VAX5$1          -5.040      0.639     -7.886      0.000
+    W6VAX5$2          -3.015      0.221    -13.619      0.000
+    W6VAX5$3          -1.302      0.110    -11.866      0.000
+    W6VAX5$4           1.952      0.160     12.235      0.000
+    W6VAX6$1          -5.111      0.901     -5.671      0.000
+    W6VAX6$2          -1.595      0.166     -9.636      0.000
+    W6VAX6$3           0.441      0.123      3.593      0.000
+    W6VAX6$4           4.013      0.355     11.301      0.000
+    W6VAX7$1          -6.293      1.085     -5.801      0.000
+    W6VAX7$2          -3.158      0.315    -10.013      0.000
+    W6VAX7$3          -0.386      0.139     -2.775      0.006
+    W6VAX7$4           2.197      0.176     12.500      0.000
+    W6VAX8$1          -4.189      0.470     -8.913      0.000
+    W6VAX8$2          -0.823      0.106     -7.790      0.000
+    W6VAX8$3           0.478      0.098      4.854      0.000
+    W6VAX8$4           3.867      0.269     14.400      0.000
+    W6VAX9$1          -3.036      0.217    -14.012      0.000
+    W6VAX9$2          -1.090      0.084    -12.939      0.000
+    W6VAX9$3          -0.901      0.113     -7.987      0.000
+    W6VAX9$4           1.785      0.156     11.433      0.000
+
+Latent Class 2
+
+ Thresholds
+    W6VAX4$1          -0.070      0.486     -0.144      0.886
+    W6VAX4$2           1.696      0.395      4.299      0.000
+    W6VAX4$3           3.586      0.807      4.443      0.000
+    W6VAX4$4           3.586      0.807      4.443      0.000
+    W6VAX5$1          -0.279      0.562     -0.497      0.619
+    W6VAX5$2           1.127      0.348      3.234      0.001
+    W6VAX5$3           3.064      0.689      4.445      0.000
+    W6VAX5$4           3.190      0.798      3.995      0.000
+    W6VAX6$1           0.643      0.660      0.975      0.330
+    W6VAX6$2           2.366      0.530      4.466      0.000
+    W6VAX6$3           4.283      1.040      4.118      0.000
+    W6VAX6$4           4.339      1.069      4.057      0.000
+    W6VAX7$1           0.327      0.601      0.545      0.586
+    W6VAX7$2           3.541      2.333      1.518      0.129
+    W6VAX7$3           6.977     58.502      0.119      0.905
+    W6VAX7$4          15.000      0.000    999.000    999.000
+    W6VAX8$1           0.849      0.594      1.430      0.153
+    W6VAX8$2           2.866      0.831      3.448      0.001
+    W6VAX8$3           3.941      2.163      1.822      0.068
+    W6VAX8$4          15.000      0.000    999.000    999.000
+    W6VAX9$1           0.514      0.457      1.126      0.260
+    W6VAX9$2           2.128      0.474      4.485      0.000
+    W6VAX9$3           2.128      0.474      4.485      0.000
+    W6VAX9$4           3.318      0.600      5.527      0.000
+
+Latent Class 3
+
+ Thresholds
+    W6VAX4$1          -6.271      0.634     -9.886      0.000
+    W6VAX4$2          -3.639      0.279    -13.018      0.000
+    W6VAX4$3          -2.949      0.194    -15.172      0.000
+    W6VAX4$4          -0.998      0.104     -9.582      0.000
+    W6VAX5$1          -3.627      0.219    -16.582      0.000
+    W6VAX5$2          -2.499      0.139    -17.924      0.000
+    W6VAX5$3          -1.861      0.111    -16.799      0.000
+    W6VAX5$4          -0.421      0.080     -5.261      0.000
+    W6VAX6$1          -3.725      0.258    -14.461      0.000
+    W6VAX6$2          -2.300      0.134    -17.163      0.000
+    W6VAX6$3          -0.947      0.088    -10.787      0.000
+    W6VAX6$4           0.592      0.085      6.955      0.000
+    W6VAX7$1          -5.033      0.475    -10.585      0.000
+    W6VAX7$2          -3.522      0.266    -13.252      0.000
+    W6VAX7$3          -1.928      0.133    -14.472      0.000
+    W6VAX7$4          -0.738      0.100     -7.345      0.000
+    W6VAX8$1          -2.870      0.170    -16.868      0.000
+    W6VAX8$2          -1.501      0.102    -14.756      0.000
+    W6VAX8$3          -0.706      0.084     -8.442      0.000
+    W6VAX8$4           0.649      0.087      7.490      0.000
+    W6VAX9$1          -1.687      0.091    -18.564      0.000
+    W6VAX9$2          -1.398      0.088    -15.958      0.000
+    W6VAX9$3          -1.259      0.086    -14.591      0.000
+    W6VAX9$4          -1.015      0.101    -10.085      0.000
+
+Latent Class 4
+
+ Thresholds
+    W6VAX4$1          -4.287      0.742     -5.775      0.000
+    W6VAX4$2          -1.307      0.321     -4.073      0.000
+    W6VAX4$3          -0.142      0.223     -0.635      0.525
+    W6VAX4$4           2.017      0.208      9.702      0.000
+    W6VAX5$1          -3.737      0.411     -9.100      0.000
+    W6VAX5$2          -1.014      0.277     -3.656      0.000
+    W6VAX5$3           0.161      0.209      0.770      0.441
+    W6VAX5$4           2.085      0.244      8.557      0.000
+    W6VAX6$1          -1.835      0.196     -9.354      0.000
+    W6VAX6$2           0.858      0.286      2.999      0.003
+    W6VAX6$3           3.285      0.438      7.495      0.000
+    W6VAX6$4           5.064      0.829      6.110      0.000
+    W6VAX7$1          -2.858      0.290     -9.863      0.000
+    W6VAX7$2          -0.082      0.284     -0.290      0.772
+    W6VAX7$3           2.502      0.489      5.122      0.000
+    W6VAX7$4           4.361      0.953      4.576      0.000
+    W6VAX8$1          -1.566      0.209     -7.489      0.000
+    W6VAX8$2           0.958      0.249      3.839      0.000
+    W6VAX8$3           2.534      0.354      7.169      0.000
+    W6VAX8$4           5.506      0.984      5.595      0.000
+    W6VAX9$1          -3.320      0.789     -4.207      0.000
+    W6VAX9$2          -0.587      0.216     -2.718      0.007
+    W6VAX9$3           1.251      0.252      4.974      0.000
+    W6VAX9$4           4.148      0.640      6.478      0.000
+
+Latent Class 5
+
+ Thresholds
+    W6VAX4$1         -15.000      0.000    999.000    999.000
+    W6VAX4$2          -4.342      1.237     -3.510      0.000
+    W6VAX4$3           2.288      0.674      3.396      0.001
+    W6VAX4$4           7.066      7.014      1.007      0.314
+    W6VAX5$1          -4.984      1.183     -4.213      0.000
+    W6VAX5$2          -2.906      0.807     -3.600      0.000
+    W6VAX5$3           3.718      1.205      3.087      0.002
+    W6VAX5$4           6.543      3.746      1.747      0.081
+    W6VAX6$1          -5.253      1.601     -3.280      0.001
+    W6VAX6$2          -2.122      0.375     -5.655      0.000
+    W6VAX6$3           3.180      0.430      7.388      0.000
+    W6VAX6$4          15.000      0.000    999.000    999.000
+    W6VAX7$1         -15.000      0.000    999.000    999.000
+    W6VAX7$2          -3.397      0.670     -5.070      0.000
+    W6VAX7$3           3.223      0.621      5.191      0.000
+    W6VAX7$4           5.274      1.509      3.494      0.000
+    W6VAX8$1          -3.371      0.469     -7.193      0.000
+    W6VAX8$2          -2.268      0.450     -5.035      0.000
+    W6VAX8$3           3.537      0.518      6.829      0.000
+    W6VAX8$4          15.000      0.000    999.000    999.000
+    W6VAX9$1          -3.789      0.613     -6.181      0.000
+    W6VAX9$2          -2.764      0.725     -3.812      0.000
+    W6VAX9$3           2.448      0.387      6.333      0.000
+    W6VAX9$4           5.319      1.263      4.210      0.000
+
+Categorical Latent Variables
+
+ Means
+    C#1                1.676      0.159     10.572      0.000
+    C#2               -0.780      0.379     -2.061      0.039
+    C#3                1.483      0.166      8.914      0.000
+    C#4                0.970      0.247      3.923      0.000
+
+
+RESULTS IN PROBABILITY SCALE
+
+Latent Class 1
+
+ W6VAX4
+    Category 1         0.001      0.001      0.770      0.442
+    Category 2         0.032      0.007      4.518      0.000
+    Category 3         0.114      0.012      9.197      0.000
+    Category 4         0.718      0.021     34.954      0.000
+    Category 5         0.135      0.019      7.303      0.000
+ W6VAX5
+    Category 1         0.006      0.004      1.575      0.115
+    Category 2         0.040      0.009      4.743      0.000
+    Category 3         0.167      0.016     10.532      0.000
+    Category 4         0.662      0.022     30.201      0.000
+    Category 5         0.124      0.017      7.157      0.000
+ W6VAX6
+    Category 1         0.006      0.005      1.116      0.264
+    Category 2         0.163      0.020      8.047      0.000
+    Category 3         0.440      0.020     21.936      0.000
+    Category 4         0.374      0.027     13.611      0.000
+    Category 5         0.018      0.006      2.867      0.004
+ W6VAX7
+    Category 1         0.002      0.002      0.924      0.356
+    Category 2         0.039      0.012      3.252      0.001
+    Category 3         0.364      0.029     12.630      0.000
+    Category 4         0.495      0.029     17.219      0.000
+    Category 5         0.100      0.016      6.321      0.000
+ W6VAX8
+    Category 1         0.015      0.007      2.160      0.031
+    Category 2         0.290      0.020     14.523      0.000
+    Category 3         0.312      0.018     17.533      0.000
+    Category 4         0.362      0.022     16.373      0.000
+    Category 5         0.020      0.005      3.801      0.000
+ W6VAX9
+    Category 1         0.046      0.009      4.837      0.000
+    Category 2         0.206      0.015     13.487      0.000
+    Category 3         0.037      0.016      2.329      0.020
+    Category 4         0.568      0.020     28.960      0.000
+    Category 5         0.144      0.019      7.478      0.000
+
+Latent Class 2
+
+ W6VAX4
+    Category 1         0.483      0.121      3.977      0.000
+    Category 2         0.362      0.109      3.336      0.001
+    Category 3         0.128      0.047      2.739      0.006
+    Category 4         0.000      0.000      0.000      1.000
+    Category 5         0.027      0.021      1.273      0.203
+ W6VAX5
+    Category 1         0.431      0.138      3.125      0.002
+    Category 2         0.325      0.168      1.928      0.054
+    Category 3         0.200      0.058      3.478      0.001
+    Category 4         0.005      0.011      0.439      0.661
+    Category 5         0.040      0.030      1.304      0.192
+ W6VAX6
+    Category 1         0.655      0.149      4.400      0.000
+    Category 2         0.259      0.151      1.710      0.087
+    Category 3         0.072      0.039      1.841      0.066
+    Category 4         0.001      0.006      0.124      0.902
+    Category 5         0.013      0.014      0.947      0.344
+ W6VAX7
+    Category 1         0.581      0.146      3.972      0.000
+    Category 2         0.391      0.105      3.711      0.000
+    Category 3         0.027      0.018      1.504      0.133
+    Category 4         0.001      0.054      0.017      0.986
+    Category 5         0.000      0.000      0.000      1.000
+ W6VAX8
+    Category 1         0.700      0.125      5.619      0.000
+    Category 2         0.246      0.102      2.407      0.016
+    Category 3         0.035      0.020      1.714      0.086
+    Category 4         0.019      0.040      0.471      0.637
+    Category 5         0.000      0.000      0.000      1.000
+ W6VAX9
+    Category 1         0.626      0.107      5.850      0.000
+    Category 2         0.268      0.103      2.609      0.009
+    Category 3         0.000      0.000      0.000      1.000
+    Category 4         0.071      0.041      1.738      0.082
+    Category 5         0.035      0.020      1.726      0.084
+
+Latent Class 3
+
+ W6VAX4
+    Category 1         0.002      0.001      1.580      0.114
+    Category 2         0.024      0.007      3.450      0.001
+    Category 3         0.024      0.006      4.000      0.000
+    Category 4         0.219      0.019     11.754      0.000
+    Category 5         0.731      0.021     35.643      0.000
+ W6VAX5
+    Category 1         0.026      0.006      4.694      0.000
+    Category 2         0.050      0.008      6.090      0.000
+    Category 3         0.059      0.009      6.377      0.000
+    Category 4         0.262      0.017     15.295      0.000
+    Category 5         0.604      0.019     31.517      0.000
+ W6VAX6
+    Category 1         0.024      0.006      3.975      0.000
+    Category 2         0.068      0.009      7.487      0.000
+    Category 3         0.188      0.014     13.299      0.000
+    Category 4         0.364      0.018     19.927      0.000
+    Category 5         0.356      0.020     18.242      0.000
+ W6VAX7
+    Category 1         0.006      0.003      2.117      0.034
+    Category 2         0.022      0.007      3.320      0.001
+    Category 3         0.098      0.013      7.649      0.000
+    Category 4         0.197      0.017     11.347      0.000
+    Category 5         0.676      0.022     30.780      0.000
+ W6VAX8
+    Category 1         0.054      0.009      6.211      0.000
+    Category 2         0.129      0.013     10.036      0.000
+    Category 3         0.148      0.013     11.145      0.000
+    Category 4         0.326      0.017     19.087      0.000
+    Category 5         0.343      0.020     17.576      0.000
+ W6VAX9
+    Category 1         0.156      0.012     13.040      0.000
+    Category 2         0.042      0.008      5.224      0.000
+    Category 3         0.023      0.006      3.798      0.000
+    Category 4         0.045      0.013      3.486      0.000
+    Category 5         0.734      0.020     37.357      0.000
+
+Latent Class 4
+
+ W6VAX4
+    Category 1         0.014      0.010      1.366      0.172
+    Category 2         0.199      0.047      4.199      0.000
+    Category 3         0.252      0.027      9.412      0.000
+    Category 4         0.418      0.051      8.205      0.000
+    Category 5         0.117      0.022      5.451      0.000
+ W6VAX5
+    Category 1         0.023      0.009      2.493      0.013
+    Category 2         0.243      0.051      4.735      0.000
+    Category 3         0.274      0.030      9.077      0.000
+    Category 4         0.349      0.043      8.050      0.000
+    Category 5         0.111      0.024      4.613      0.000
+ W6VAX6
+    Category 1         0.138      0.023      5.909      0.000
+    Category 2         0.565      0.047     11.970      0.000
+    Category 3         0.262      0.055      4.758      0.000
+    Category 4         0.030      0.014      2.092      0.036
+    Category 5         0.006      0.005      1.214      0.225
+ W6VAX7
+    Category 1         0.054      0.015      3.648      0.000
+    Category 2         0.425      0.062      6.900      0.000
+    Category 3         0.445      0.066      6.691      0.000
+    Category 4         0.063      0.030      2.096      0.036
+    Category 5         0.013      0.012      1.063      0.288
+ W6VAX8
+    Category 1         0.173      0.030      5.780      0.000
+    Category 2         0.550      0.035     15.584      0.000
+    Category 3         0.204      0.045      4.558      0.000
+    Category 4         0.069      0.024      2.937      0.003
+    Category 5         0.004      0.004      1.020      0.308
+ W6VAX9
+    Category 1         0.035      0.027      1.313      0.189
+    Category 2         0.322      0.035      9.322      0.000
+    Category 3         0.420      0.042     10.079      0.000
+    Category 4         0.207      0.041      5.027      0.000
+    Category 5         0.016      0.010      1.586      0.113
+
+Latent Class 5
+
+ W6VAX4
+    Category 1         0.000      0.000      0.000      1.000
+    Category 2         0.013      0.016      0.819      0.413
+    Category 3         0.895      0.062     14.428      0.000
+    Category 4         0.091      0.055      1.651      0.099
+    Category 5         0.001      0.006      0.143      0.887
+ W6VAX5
+    Category 1         0.007      0.008      0.851      0.395
+    Category 2         0.045      0.039      1.157      0.247
+    Category 3         0.924      0.056     16.397      0.000
+    Category 4         0.022      0.027      0.836      0.403
+    Category 5         0.001      0.005      0.267      0.789
+ W6VAX6
+    Category 1         0.005      0.008      0.628      0.530
+    Category 2         0.102      0.034      3.026      0.002
+    Category 3         0.853      0.039     22.103      0.000
+    Category 4         0.040      0.016      2.420      0.016
+    Category 5         0.000      0.000      0.000      1.000
+ W6VAX7
+    Category 1         0.000      0.000      0.000      1.000
+    Category 2         0.032      0.021      1.543      0.123
+    Category 3         0.929      0.032     29.414      0.000
+    Category 4         0.033      0.022      1.529      0.126
+    Category 5         0.005      0.008      0.666      0.505
+ W6VAX8
+    Category 1         0.033      0.015      2.207      0.027
+    Category 2         0.061      0.037      1.650      0.099
+    Category 3         0.878      0.042     21.056      0.000
+    Category 4         0.028      0.014      1.987      0.047
+    Category 5         0.000      0.000      0.000      1.000
+ W6VAX9
+    Category 1         0.022      0.013      1.668      0.095
+    Category 2         0.037      0.037      0.995      0.320
+    Category 3         0.861      0.056     15.418      0.000
+    Category 4         0.075      0.027      2.719      0.007
+    Category 5         0.005      0.006      0.795      0.426
+
+
+LATENT CLASS ODDS RATIO RESULTS
+
+                                         (Est. - 1) Two-Tailed
+                    Estimate       S.E.     / S.E.    P-Value
+
+Latent Class 1 Compared to Latent Class 2
+
+ W6VAX4
+    Category > 1     807.021   1122.940      0.718      0.473
+    Category > 2     158.452     75.870      2.075      0.038
+    Category > 3     209.867    171.534      1.218      0.223
+    Category > 4       5.652      4.597      1.012      0.312
+ W6VAX5
+    Category > 1     116.865     99.260      1.167      0.243
+    Category > 2      62.909     25.741      2.405      0.016
+    Category > 3      78.726     55.413      1.403      0.161
+    Category > 4       3.447      2.769      0.884      0.377
+ W6VAX6
+    Category > 1     315.366    313.769      1.002      0.316
+    Category > 2      52.507     29.324      1.756      0.079
+    Category > 3      46.635     49.018      0.931      0.352
+    Category > 4       1.385      1.581      0.244      0.807
+ W6VAX7
+    Category > 1     749.762    942.009      0.795      0.427
+    Category > 2     812.181   1916.133      0.423      0.672
+    Category > 3    1576.921  92202.453      0.017      0.986
+    Category > 4   *********      0.000    999.000    999.000
+ W6VAX8
+    Category > 1     154.164    107.769      1.421      0.155
+    Category > 2      40.023     33.036      1.181      0.238
+    Category > 3      31.917     68.370      0.452      0.651
+    Category > 4   68379.266      0.000    999.000    999.000
+ W6VAX9
+    Category > 1      34.817     19.528      1.732      0.083
+    Category > 2      24.965     12.115      1.978      0.048
+    Category > 3      20.678     10.230      1.924      0.054
+    Category > 4       4.630      2.882      1.259      0.208
+
+Latent Class 1 Compared to Latent Class 3
+
+ W6VAX4
+    Category > 1       1.637      2.455      0.259      0.795
+    Category > 2       0.764      0.296     -0.797      0.426
+    Category > 3       0.305      0.072     -9.610      0.000
+    Category > 4       0.058      0.010    -93.047      0.000
+ W6VAX5
+    Category > 1       4.110      2.968      1.048      0.295
+    Category > 2       1.675      0.476      1.418      0.156
+    Category > 3       0.571      0.096     -4.462      0.000
+    Category > 4       0.093      0.016    -55.910      0.000
+ W6VAX6
+    Category > 1       3.997      3.812      0.786      0.432
+    Category > 2       0.494      0.111     -4.542      0.000
+    Category > 3       0.249      0.040    -18.973      0.000
+    Category > 4       0.033      0.011    -84.833      0.000
+ W6VAX7
+    Category > 1       3.525      4.355      0.580      0.562
+    Category > 2       0.695      0.305     -1.001      0.317
+    Category > 3       0.214      0.044    -17.945      0.000
+    Category > 4       0.053      0.010    -95.080      0.000
+ W6VAX8
+    Category > 1       3.740      1.937      1.414      0.157
+    Category > 2       0.508      0.079     -6.254      0.000
+    Category > 3       0.306      0.040    -17.345      0.000
+    Category > 4       0.040      0.011    -88.070      0.000
+ W6VAX9
+    Category > 1       3.852      0.956      2.983      0.003
+    Category > 2       0.734      0.096     -2.756      0.006
+    Category > 3       0.699      0.107     -2.818      0.005
+    Category > 4       0.061      0.011    -87.156      0.000
+
+Latent Class 1 Compared to Latent Class 4
+
+ W6VAX4
+    Category > 1      11.899     19.447      0.560      0.575
+    Category > 2       7.864      3.131      2.192      0.028
+    Category > 3       5.046      1.203      3.363      0.001
+    Category > 4       1.176      0.348      0.507      0.612
+ W6VAX5
+    Category > 1       3.683      3.186      0.842      0.400
+    Category > 2       7.397      2.529      2.529      0.011
+    Category > 3       4.316      0.956      3.469      0.001
+    Category > 4       1.142      0.380      0.374      0.708
+ W6VAX6
+    Category > 1      26.452     23.978      1.061      0.288
+    Category > 2      11.623      2.839      3.741      0.000
+    Category > 3      17.186      7.342      2.205      0.027
+    Category > 4       2.859      2.747      0.677      0.499
+ W6VAX7
+    Category > 1      31.001     35.341      0.849      0.396
+    Category > 2      21.671      7.252      2.851      0.004
+    Category > 3      17.966      8.459      2.006      0.045
+    Category > 4       8.701      8.514      0.905      0.366
+ W6VAX8
+    Category > 1      13.772      6.976      1.831      0.067
+    Category > 2       5.936      1.326      3.724      0.000
+    Category > 3       7.822      2.748      2.482      0.013
+    Category > 4       5.149      5.485      0.756      0.449
+ W6VAX9
+    Category > 1       0.753      0.682     -0.362      0.717
+    Category > 2       1.653      0.407      1.605      0.108
+    Category > 3       8.607      1.992      3.819      0.000
+    Category > 4      10.618      7.117      1.351      0.177
+
+Latent Class 1 Compared to Latent Class 5
+
+ W6VAX4
+    Category > 1       0.000      0.000    999.000    999.000
+    Category > 2       0.378      0.475     -1.310      0.190
+    Category > 3      57.273     38.497      1.462      0.144
+    Category > 4     183.332   1285.910      0.142      0.887
+ W6VAX5
+    Category > 1       1.058      1.404      0.041      0.967
+    Category > 2       1.115      0.913      0.126      0.899
+    Category > 3     151.413    181.561      0.828      0.407
+    Category > 4      98.567    369.361      0.264      0.792
+ W6VAX6
+    Category > 1       0.867      1.565     -0.085      0.932
+    Category > 2       0.590      0.231     -1.770      0.077
+    Category > 3      15.474      6.719      2.154      0.031
+    Category > 4   59102.535      0.000    999.000    999.000
+ W6VAX7
+    Category > 1       0.000      0.000    999.000    999.000
+    Category > 2       0.788      0.573     -0.370      0.711
+    Category > 3      36.944     23.349      1.539      0.124
+    Category > 4      21.686     33.105      0.625      0.532
+ W6VAX8
+    Category > 1       2.266      1.478      0.857      0.392
+    Category > 2       0.236      0.104     -7.346      0.000
+    Category > 3      21.312     11.244      1.806      0.071
+    Category > 4   68379.266      0.000    999.000    999.000
+ W6VAX9
+    Category > 1       0.471      0.309     -1.714      0.087
+    Category > 2       0.187      0.138     -5.868      0.000
+    Category > 3      28.495     11.352      2.422      0.015
+    Category > 4      34.241     43.619      0.762      0.446
+
+Latent Class 2 Compared to Latent Class 3
+
+ W6VAX4
+    Category > 1       0.002      0.002   -619.914      0.000
+    Category > 2       0.005      0.002   -426.355      0.000
+    Category > 3       0.001      0.001   -829.309      0.000
+    Category > 4       0.010      0.008   -119.367      0.000
+ W6VAX5
+    Category > 1       0.035      0.022    -44.718      0.000
+    Category > 2       0.027      0.010    -97.969      0.000
+    Category > 3       0.007      0.005   -196.136      0.000
+    Category > 4       0.027      0.022    -44.665      0.000
+ W6VAX6
+    Category > 1       0.013      0.009   -107.672      0.000
+    Category > 2       0.009      0.005   -194.311      0.000
+    Category > 3       0.005      0.006   -178.381      0.000
+    Category > 4       0.024      0.025    -38.548      0.000
+ W6VAX7
+    Category > 1       0.005      0.004   -252.704      0.000
+    Category > 2       0.001      0.002   -491.353      0.000
+    Category > 3       0.000      0.008   -125.880      0.000
+    Category > 4       0.000      0.000    999.000    999.000
+ W6VAX8
+    Category > 1       0.024      0.015    -63.907      0.000
+    Category > 2       0.013      0.011    -92.348      0.000
+    Category > 3       0.010      0.021    -47.631      0.000
+    Category > 4       0.000      0.000    999.000    999.000
+ W6VAX9
+    Category > 1       0.111      0.052    -17.136      0.000
+    Category > 2       0.029      0.014    -68.415      0.000
+    Category > 3       0.034      0.016    -59.159      0.000
+    Category > 4       0.013      0.008   -123.389      0.000
+
+Latent Class 2 Compared to Latent Class 4
+
+ W6VAX4
+    Category > 1       0.015      0.008   -123.402      0.000
+    Category > 2       0.050      0.023    -40.852      0.000
+    Category > 3       0.024      0.020    -49.020      0.000
+    Category > 4       0.208      0.178     -4.457      0.000
+ W6VAX5
+    Category > 1       0.032      0.018    -52.773      0.000
+    Category > 2       0.118      0.063    -13.909      0.000
+    Category > 3       0.055      0.042    -22.387      0.000
+    Category > 4       0.331      0.294     -2.276      0.023
+ W6VAX6
+    Category > 1       0.084      0.051    -17.832      0.000
+    Category > 2       0.221      0.140     -5.549      0.000
+    Category > 3       0.369      0.439     -1.439      0.150
+    Category > 4       2.064      2.808      0.379      0.705
+ W6VAX7
+    Category > 1       0.041      0.022    -42.814      0.000
+    Category > 2       0.027      0.060    -16.145      0.000
+    Category > 3       0.011      0.670     -1.476      0.140
+    Category > 4       0.000      0.000    999.000    999.000
+ W6VAX8
+    Category > 1       0.089      0.046    -19.609      0.000
+    Category > 2       0.148      0.122     -6.965      0.000
+    Category > 3       0.245      0.572     -1.319      0.187
+    Category > 4       0.000      0.000    999.000    999.000
+ W6VAX9
+    Category > 1       0.022      0.013    -74.541      0.000
+    Category > 2       0.066      0.034    -27.607      0.000
+    Category > 3       0.416      0.240     -2.428      0.015
+    Category > 4       2.293      2.126      0.608      0.543
+
+Latent Class 2 Compared to Latent Class 5
+
+ W6VAX4
+    Category > 1       0.000      0.000    999.000    999.000
+    Category > 2       0.002      0.003   -324.164      0.000
+    Category > 3       0.273      0.294     -2.476      0.013
+    Category > 4      32.437    229.206      0.137      0.891
+ W6VAX5
+    Category > 1       0.009      0.012    -84.420      0.000
+    Category > 2       0.018      0.016    -61.430      0.000
+    Category > 3       1.923      2.565      0.360      0.719
+    Category > 4      28.599    107.197      0.257      0.797
+ W6VAX6
+    Category > 1       0.003      0.005   -221.311      0.000
+    Category > 2       0.011      0.008   -131.708      0.000
+    Category > 3       0.332      0.372     -1.797      0.072
+    Category > 4   42657.984      0.000    999.000    999.000
+ W6VAX7
+    Category > 1       0.000      0.000    999.000    999.000
+    Category > 2       0.001      0.002   -447.067      0.000
+    Category > 3       0.023      1.370     -0.713      0.476
+    Category > 4       0.000      0.000    999.000    999.000
+ W6VAX8
+    Category > 1       0.015      0.011    -88.923      0.000
+    Category > 2       0.006      0.005   -198.670      0.000
+    Category > 3       0.668      1.473     -0.226      0.822
+    Category > 4       1.000      0.000    999.000    999.000
+ W6VAX9
+    Category > 1       0.014      0.011    -92.651      0.000
+    Category > 2       0.008      0.006   -154.742      0.000
+    Category > 3       1.378      0.852      0.444      0.657
+    Category > 4       7.395     10.317      0.620      0.535
+
+Latent Class 3 Compared to Latent Class 4
+
+ W6VAX4
+    Category > 1       7.270      6.993      0.897      0.370
+    Category > 2      10.292      4.427      2.099      0.036
+    Category > 3      16.571      4.877      3.193      0.001
+    Category > 4      20.390      4.750      4.082      0.000
+ W6VAX5
+    Category > 1       0.896      0.419     -0.248      0.804
+    Category > 2       4.417      1.394      2.450      0.014
+    Category > 3       7.553      1.799      3.643      0.000
+    Category > 4      12.264      3.144      3.583      0.000
+ W6VAX6
+    Category > 1       6.619      2.296      2.447      0.014
+    Category > 2      23.521      7.830      2.876      0.004
+    Category > 3      68.893     30.870      2.199      0.028
+    Category > 4      87.477     73.006      1.185      0.236
+ W6VAX7
+    Category > 1       8.794      5.253      1.484      0.138
+    Category > 2      31.184     12.754      2.367      0.018
+    Category > 3      83.925     42.454      1.953      0.051
+    Category > 4     163.717    156.497      1.040      0.298
+ W6VAX8
+    Category > 1       3.682      1.065      2.519      0.012
+    Category > 2      11.689      3.257      3.281      0.001
+    Category > 3      25.535      9.277      2.645      0.008
+    Category > 4     128.655    126.937      1.006      0.315
+ W6VAX9
+    Category > 1       0.195      0.156     -5.160      0.000
+    Category > 2       2.250      0.530      2.358      0.018
+    Category > 3      12.305      3.292      3.435      0.001
+    Category > 4     174.600    112.465      1.544      0.123
+
+Latent Class 3 Compared to Latent Class 5
+
+ W6VAX4
+    Category > 1       0.000      0.000    999.000    999.000
+    Category > 2       0.495      0.629     -0.803      0.422
+    Category > 3     188.080    130.894      1.429      0.153
+    Category > 4    3177.680  22305.205      0.142      0.887
+ W6VAX5
+    Category > 1       0.257      0.310     -2.399      0.016
+    Category > 2       0.666      0.548     -0.609      0.542
+    Category > 3     264.943    320.469      0.824      0.410
+    Category > 4    1058.225   3967.189      0.266      0.790
+ W6VAX6
+    Category > 1       0.217      0.353     -2.220      0.026
+    Category > 2       1.195      0.494      0.394      0.693
+    Category > 3      62.031     27.223      2.242      0.025
+    Category > 4   *********      0.000    999.000    999.000
+ W6VAX7
+    Category > 1       0.000      0.000    999.000    999.000
+    Category > 2       1.133      0.835      0.160      0.873
+    Category > 3     172.584    108.982      1.574      0.115
+    Category > 4     408.040    617.799      0.659      0.510
+ W6VAX8
+    Category > 1       0.606      0.299     -1.316      0.188
+    Category > 2       0.465      0.218     -2.453      0.014
+    Category > 3      69.573     36.365      1.886      0.059
+    Category > 4   *********      0.000    999.000    999.000
+ W6VAX9
+    Category > 1       0.122      0.075    -11.637      0.000
+    Category > 2       0.255      0.186     -3.998      0.000
+    Category > 3      40.739     16.148      2.461      0.014
+    Category > 4     563.065    713.435      0.788      0.431
+
+Latent Class 4 Compared to Latent Class 5
+
+ W6VAX4
+    Category > 1       0.000      0.000    999.000    999.000
+    Category > 2       0.048      0.059    -16.047      0.000
+    Category > 3      11.350      8.660      1.195      0.232
+    Category > 4     155.843   1098.443      0.141      0.888
+ W6VAX5
+    Category > 1       0.287      0.375     -1.899      0.058
+    Category > 2       0.151      0.123     -6.879      0.000
+    Category > 3      35.078     45.147      0.755      0.450
+    Category > 4      86.289    326.940      0.261      0.794
+ W6VAX6
+    Category > 1       0.033      0.053    -18.359      0.000
+    Category > 2       0.051      0.019    -51.054      0.000
+    Category > 3       0.900      0.570     -0.175      0.861
+    Category > 4   20670.984      0.000    999.000    999.000
+ W6VAX7
+    Category > 1       0.000      0.000    999.000    999.000
+    Category > 2       0.036      0.024    -39.753      0.000
+    Category > 3       2.056      1.704      0.620      0.535
+    Category > 4       2.492      4.869      0.307      0.759
+ W6VAX8
+    Category > 1       0.165      0.087     -9.619      0.000
+    Category > 2       0.040      0.016    -58.553      0.000
+    Category > 3       2.725      1.810      0.953      0.341
+    Category > 4   13279.193      0.000    999.000    999.000
+ W6VAX9
+    Category > 1       0.625      0.674     -0.556      0.578
+    Category > 2       0.113      0.082    -10.831      0.000
+    Category > 3       3.311      1.566      1.476      0.140
+    Category > 4       3.225      4.656      0.478      0.633
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.599E-06
+       (ratio of smallest to largest eigenvalue)
+
+
+DIAGRAM INFORMATION
+
+  Mplus diagrams are currently not available for Mixture analysis.
+  No diagram output was produced.
+
+
+     Beginning Time:  23:16:03
+        Ending Time:  23:16:07
+       Elapsed Time:  00:00:04
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2019 Muthen & Muthen
